@@ -1,0 +1,8 @@
+import { FormEvent, useState } from 'react'
+import { submitRegistration } from '../services/form'
+
+export function Registration(){
+ const [status,setStatus]=useState<'idle'|'loading'|'success'|'error'>('idle')
+ async function onSubmit(e:FormEvent<HTMLFormElement>){e.preventDefault();const fd=new FormData(e.currentTarget);const payload={name:String(fd.get('name')||''),contact:String(fd.get('contact')||''),email:String(fd.get('email')||''),consent:fd.get('consent')==='on'};if(!payload.name||!payload.contact||!payload.email||!payload.consent){setStatus('error');return}setStatus('loading');try{await submitRegistration(payload);setStatus('success');e.currentTarget.reset()}catch{setStatus('error')}}
+ return <section className="registration" id="registration"><div className="sectionInner registrationGrid"><div><p className="kicker">Регистрация</p><h2>Сделайте следующий шаг</h2><p>Оставьте контактные данные. Команда проекта свяжется с вами после подключения канала обработки заявок.</p></div><form onSubmit={onSubmit} noValidate><label>Имя<input name="name" required autoComplete="name"/></label><label>Телефон или Telegram<input name="contact" required/></label><label>Электронная почта<input name="email" type="email" required autoComplete="email"/></label><label className="consent"><input name="consent" type="checkbox" required/><span>Согласен на обработку персональных данных</span></label><button className="btn primary" disabled={status==='loading'}>{status==='loading'?'Отправляем...':'Записаться на курс'}</button>{status==='success'&&<p className="success">Заявка принята. Форма работает в демонстрационном режиме.</p>}{status==='error'&&<p className="error">Заполните все поля и подтвердите согласие.</p>}</form></div></section>
+}
