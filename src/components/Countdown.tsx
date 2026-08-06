@@ -26,7 +26,7 @@ export function Countdown() {
   }, [target])
 
   if (timeLeft.started) {
-    return <p className="countdownStarted" role="status">Курс уже начался</p>
+    return <p className="countdownStarted" role="status">Обучение началось</p>
   }
 
   const parts = [

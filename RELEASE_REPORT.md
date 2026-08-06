@@ -1,51 +1,71 @@
-# Release report — put-muzhchiny-landing v1.1.0
+# Release report — Men-s-Way v2.0.0
 
 ## Source
-- Archive: `put-muzhchiny-landing-ready.zip`
-- Source package version: `1.0.0`
+
+- Repository: `vla5521-art/Men-s-Way`
+- Branch: `main`
+- Source commit: `65f8a22fc4ae18a43e2a9d202153aeca8b0f1c23`
+- Source package version: `1.1.0`
 
 ## Result
-- Archive: `put-muzhchiny-landing-v1.1.0.zip`
-- Package version: `1.1.0`
+
+- Archive: `Men-s-Way_v2.0.zip`
+- Package version: `2.0.0`
 
 ## Changes
-- Replaced the hero slogan with: «ВРЕМЯ СТАНОВИТЬСЯ ТЕМ МУЖЧИНОЙ, КОТОРЫМ ТЫ СПОСОБЕН БЫТЬ».
-- Added a responsive countdown to `20 September 2026, 08:00 Moscow time (UTC+3)`.
-- Added a voluntary-donation section with no fixed participation fee.
-- Added contact cards for Russia and Kazakhstan.
-- Added clickable `tel:` links for Russian contacts.
-- Valeriy Imaev's phone is intentionally deferred to a future release and is not presented as a working number.
-- Added placeholder widgets for Telegram, Instagram, Rutube and YouTube. They are intentionally non-clickable until real URLs are supplied in a later release.
-- Added responsive styles for desktop, tablet and mobile layouts.
 
-## Changed files
-- `package.json`
-- `.env.example`
-- `src/data/content.ts`
-- `src/components/Hero.tsx`
-- `src/components/Countdown.tsx` (new)
-- `src/components/Sections.tsx`
-- `src/styles/global.css`
-- `RELEASE_REPORT.md` (new)
+- Preserved the dark premium visual system, gold palette, approved logo, hero composition, path lines, cards and responsive principles.
+- Implemented the approved v2.0 structure and copy across recognition, course idea, audience, program, results, format, community, values, donation, FAQ, registration steps, contacts and final CTA.
+- Kept the approved hero slogan and added the approved hero details and CTA labels.
+- Expanded all eight approved program topics, the final-month topics and both recommended films.
+- Preserved the countdown and updated its completed state to «Обучение началось».
+- Preserved the form payload and `VITE_FORM_ENDPOINT` integration; improved native validation, labels, focus behavior and status announcements.
+- Preserved real Russian contacts without inventing missing data.
+- Added configuration flags so teachers, testimonials and social networks remain hidden until verified data exists.
+- Improved mobile menu behavior, keyboard support, focus visibility, reduced-motion support and 320 px layout safety.
+- Added a lockfile so `npm ci` can be used consistently.
+- Updated package metadata to `2.0.0`, README and SEO descriptions.
 
-## Commands
-- Local development: `npm run dev`
-- Production build: `npm run build`
-- Production preview: `npm run preview`
+## Preserved functionality
 
-## Deferred data
-- Valeriy Imaev's full phone number.
-- Telegram URL.
-- Instagram URL.
-- Rutube URL.
-- YouTube URL.
+- hero and approved logo;
+- countdown to 20 September 2026;
+- voluntary-donation section without a fixed amount;
+- form handler, JSON contract and optional endpoint integration;
+- real contact phone links;
+- social-network configuration;
+- navigation, anchors and mobile menu;
+- local responsive images;
+- SEO metadata, robots, sitemap and Vercel SPA rewrite.
 
-The social widgets are deliberate visual placeholders in this release.
+## Hidden pending verified data
 
-## Verification results in this environment
-- `npm ci`: not available because the source archive contains no `package-lock.json`.
-- `npm install --no-audit --no-fund`: blocked by the execution environment's internal npm registry (`404` for `@types/react@^19.1.9`). No dependency versions were changed.
-- `npm run lint`, `npm run typecheck`, `npm run build`: could not be completed because dependencies could not be installed.
-- A global `tsc -b` attempt was made, but it cannot resolve React/Vite modules without installed dependencies; the resulting errors are environment/dependency-resolution errors rather than a completed project verification.
+- teachers;
+- testimonials;
+- Kazakhstan contact placeholder;
+- Telegram, Instagram, Rutube and YouTube links.
 
-The archive preserves the original dependency declarations. Run `npm install` (or generate and commit a lockfile, then use `npm ci`) in a normal npm environment before deployment.
+## Temporary limitations
+
+- form submissions are simulated when `VITE_FORM_ENDPOINT` is not configured;
+- the production domain is unknown, so `public/sitemap.xml` retains `https://example.com/`;
+- no automated test suite is defined by the project.
+
+## Verification
+
+- `npm ci` — PASS, 70 packages installed from the generated lockfile.
+- `npm run lint` — PASS.
+- `npm run typecheck` — PASS.
+- `npm run build` — PASS, Vite production bundle generated successfully.
+- Automated tests — NOT RUN: the source project does not define a test suite or `npm test` script.
+- Production preview — PASS, HTTP 200.
+- Browser console and page errors — PASS, no errors across verified viewports.
+- Responsive checks — PASS at 1440×900, 1024×768, 768×1024, 430×932, 390×844 and 320×720.
+- Horizontal overflow — PASS, 0 px at every verified viewport.
+- Images — PASS, no broken local images.
+- Navigation and CTA anchors — PASS.
+- Mobile menu — PASS, open/close, Escape, initial focus and focus wrapping.
+- Form — PASS in the repository's endpoint-free demonstration mode.
+- Countdown — PASS, no negative values.
+
+Non-blocking environment warning: npm reports an external `http-proxy` config that will be unsupported in a future npm major release. It is not defined by this project and does not affect the build.
