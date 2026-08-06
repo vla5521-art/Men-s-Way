@@ -1,6 +1,7 @@
 import { course } from '../data/content'
 import community from '../assets/community.webp'
 import communityMobile from '../assets/community-mobile.webp'
+import { Countdown } from './Countdown'
 
 const icons = { calendar:'◫', clock:'◷', globe:'◎' }
 export function Hero(){
@@ -16,6 +17,7 @@ export function Hero(){
         <Fact icon={icons.globe} label="Формат" value={course.format}/>
       </div>
       <p className="support">◉ <span>{course.support}</span></p>
+      <div className="heroCountdown"><span className="countdownLabel">До начала курса</span><Countdown/></div>
       <div className="heroActions"><a className="btn primary" href="#registration">Записаться на курс</a><a className="btn secondary" href="#program">Узнать о программе</a></div>
     </div>
     <div className="heroVisual" aria-hidden="true">

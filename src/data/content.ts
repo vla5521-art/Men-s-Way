@@ -1,13 +1,31 @@
 export const course = {
   title: 'Путь мужчины',
   eyebrow: 'Онлайн-курс для мужчин',
-  slogan: 'Свой путь. Не в одиночку.',
+  slogan: 'ВРЕМЯ СТАНОВИТЬСЯ ТЕМ МУЖЧИНОЙ, КОТОРЫМ ТЫ СПОСОБЕН БЫТЬ',
   description: 'Трехмесячная программа о зрелости, ответственности, лидерстве, отношениях и жизненных ориентирах мужчины.',
   start: '20 сентября 2026',
+  startAt: '2026-09-20T08:00:00+03:00',
   duration: '3 месяца',
   format: 'Онлайн',
   support: 'Живые Zoom-встречи и общение с участниками и кураторами'
 }
+
+export const contacts = {
+  russia: [
+    { name: 'Евгений Безносиков', phone: '+7 (906) 879-85-74', href: 'tel:+79068798574' },
+    { name: 'Владимир Ильин', phone: '+7 (977) 444-35-68', href: 'tel:+79774443568' }
+  ],
+  kazakhstan: [
+    { name: 'Валерий Имаев', phone: 'Номер будет добавлен в следующем релизе', href: '' }
+  ]
+}
+
+export const socialNetworks = [
+  { id: 'telegram', label: 'Telegram' },
+  { id: 'instagram', label: 'Instagram' },
+  { id: 'rutube', label: 'Rutube' },
+  { id: 'youtube', label: 'YouTube' }
+] as const
 
 export const topics = [
   'Три тропы счастья и успеха',
