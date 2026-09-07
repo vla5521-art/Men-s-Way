@@ -212,17 +212,15 @@ summary {
   display: grid;
   flex: 0 0 auto;
   place-items: center;
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--gold);
-  border-radius: 50%;
+  width: 46px;
+  height: 46px;
   color: var(--gold);
 }
 
 .factIcon svg {
   display: block;
-  width: 23px;
-  height: 23px;
+  width: 46px;
+  height: 46px;
 }
 
 .fact b,
