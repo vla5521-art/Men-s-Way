@@ -11,14 +11,12 @@ export function Hero() {
       <div className="heroContent">
         <p className="eyebrow">{course.eyebrow}</p>
         <h1>{course.title}</h1>
-        <p className="slogan">{course.slogan}</p>
         <p className="lead">{course.description}</p>
         <div className="facts" aria-label="Параметры курса">
           <Fact icon={icons.calendar} label="Старт" value={course.start} />
           <Fact icon={icons.clock} label="Продолжительность" value={course.duration} />
           <Fact icon={icons.globe} label="Формат" value={course.format} />
         </div>
-        <p className="support"><span aria-hidden="true">◉</span> {course.support}</p>
         <div className="heroActions">
           <a className="btn primary" href="#registration">Записаться на курс</a>
           <a className="btn secondary" href="#program">Посмотреть программу</a>
@@ -26,7 +24,7 @@ export function Hero() {
         <div className="heroCountdown">
           <span className="countdownLabel">До начала курса осталось</span>
           <Countdown />
-          <p>Старт программы — 20 сентября 2026 года.</p>
+          <p>Старт программы — 22 сентября 2026 года.</p>
         </div>
       </div>
       <div className="heroVisual" aria-hidden="true">
