@@ -217,7 +217,12 @@ summary {
   border: 1px solid var(--gold);
   border-radius: 50%;
   color: var(--gold);
-  font-size: 20px;
+}
+
+.factIcon svg {
+  display: block;
+  width: 23px;
+  height: 23px;
 }
 
 .fact b,
@@ -502,15 +507,8 @@ summary {
   box-shadow: var(--shadow);
 }
 
-.card > span {
-  color: var(--gold);
-  font-size: 13px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .card h3 {
-  margin: 30px 0 12px;
+  margin: 0 0 12px;
   font-size: 21px;
   line-height: 1.25;
 }
@@ -523,6 +521,15 @@ summary {
 
 .recognition {
   background: linear-gradient(180deg, #101c2a, #0c1825) !important;
+}
+
+.recognition .cards {
+  width: 85%;
+}
+
+.recognition .card {
+  min-height: 187px;
+  padding: 25.5px;
 }
 
 .idea,
@@ -928,7 +935,10 @@ summary {
   line-height: 1.75;
 }
 
-.registration form {
+.registrationChoices {
+  display: grid;
+  gap: 16px;
+  align-self: center;
   padding: 34px;
   border: 1px solid var(--line);
   border-radius: 10px;
@@ -936,71 +946,48 @@ summary {
   box-shadow: var(--shadow);
 }
 
-.registration form > label:not(.consent) {
-  display: block;
-  margin-bottom: 8px;
-  color: var(--gold-light);
-  font-size: 14px;
-}
-
-.registration form > input {
-  display: block;
-  width: 100%;
-  margin: 0 0 20px;
-  padding: 14px;
-  border: 1px solid #3e4e61;
-  border-radius: 6px;
-  background: #0b1520;
-  color: #fff;
-}
-
-.registration input:focus {
-  border-color: var(--gold);
-}
-
-.consent {
+.registrationChoice {
   display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin: 4px 0 22px;
-  color: #d4d9de;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.consent input {
-  flex: 0 0 auto;
-  width: 18px;
-  height: 18px;
-  margin: 1px 0 0;
-  accent-color: var(--gold);
-}
-
-.registration .btn {
+  align-items: center;
   width: 100%;
+  gap: 18px;
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.025);
+  text-align: left;
 }
 
-.registration .btn:disabled {
-  cursor: wait;
-  filter: grayscale(0.3);
-  opacity: 0.72;
+.registrationChoice:disabled {
+  cursor: not-allowed;
+  opacity: 0.78;
 }
 
-.formStatus {
-  min-height: 0;
+.registrationChoice svg {
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  fill: var(--gold-light);
 }
 
-.formStatus p {
-  margin: 18px 0 0;
-  line-height: 1.6;
+.registrationChoice .platformIconDetail {
+  fill: #101b28;
 }
 
-.success {
-  color: #9ed6ad;
+.registrationChoiceText {
+  display: grid;
+  gap: 5px;
 }
 
-.error {
-  color: #ffb1a7;
+.registrationChoiceText strong {
+  color: var(--gold-light);
+  font-size: 18px;
+}
+
+.registrationChoiceText small {
+  color: var(--muted);
+  font-size: 13px;
 }
 
 .finalCta {
@@ -1205,6 +1192,10 @@ footer a:hover {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .recognition .cards {
+    width: 100%;
+  }
+
   .moduleGrid {
     grid-template-columns: 1fr;
   }
@@ -1344,6 +1335,11 @@ footer a:hover {
     padding: 26px;
   }
 
+  .recognition .card {
+    min-height: 0;
+    padding: 22px;
+  }
+
   .moduleCard {
     padding: 28px 22px;
   }
@@ -1376,7 +1372,7 @@ footer a:hover {
     font-size: 17px;
   }
 
-  .registration form {
+  .registrationChoices {
     padding: 25px 20px;
   }
 

@@ -64,9 +64,3 @@ export const programModules: ProgramModule[] = [
     ]
   }
 ]
-
-export const resultCards: ContentCard[] = [
-  { title: 'Внутренняя устойчивость' },
-  { title: 'Осмысленная жизнь' },
-  { title: 'Духовное развитие' }
-]

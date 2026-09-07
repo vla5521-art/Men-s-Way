@@ -1,6 +1,5 @@
 import {
   programModules,
-  resultCards,
   startingPoints,
   type ContentCard
 } from '../data/content'
@@ -47,7 +46,6 @@ export function Sections() {
             title="Вместе мы пройдём прорывной путь"
             text="От ограничений и напряжения — к внутренней устойчивости, осмысленной жизни и духовному развитию."
           />
-          <CardGrid items={resultCards} />
         </div>
       </section>
     </>
@@ -67,9 +65,8 @@ function SectionHeading({ kicker, title, text }: { kicker: string; title: string
 function CardGrid({ items }: { items: ContentCard[] }) {
   return (
     <div className="cards columns-3">
-      {items.map((item, index) => (
+      {items.map((item) => (
         <article className="card" key={item.title}>
-          <span>{String(index + 1).padStart(2, '0')}</span>
           <h3>{item.title}</h3>
           {item.text ? <p>{item.text}</p> : null}
         </article>
