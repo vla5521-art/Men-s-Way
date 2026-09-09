@@ -36,7 +36,6 @@ export function Hero() {
         <div className="pathLine pathOne" />
         <div className="pathLine pathTwo" />
       </div>
-      <a className="scrollHint" href="#about" aria-label="Перейти к следующему разделу">↓</a>
     </section>
   )
 }
