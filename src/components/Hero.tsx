@@ -11,15 +11,16 @@ export function Hero() {
       <div className="heroContent">
         <p className="eyebrow">{course.eyebrow}</p>
         <h1>{course.title}</h1>
-        <p className="lead">{course.description}</p>
+        <p className="slogan">Как стать опорой для себя, семьи и своего дела — без постоянного напряжения и необходимости всё контролировать.</p>
+        <p className="lead">Для мужчин, которые хотят укрепить характер, разобраться в отношениях и увидеть направление дальнейшего развития.</p>
+        <div className="heroActions">
+          <a className="btn primary" href="#registration">Записаться на курс</a>
+          <a className="btn secondary" href="#about">Узнать о курсе</a>
+        </div>
         <div className="facts" aria-label="Параметры курса">
           <Fact icon="calendar" label="Старт" value={course.start} />
           <Fact icon="clock" label="Продолжительность" value={course.duration} />
           <Fact icon="online" label="Формат" value={course.format} />
-        </div>
-        <div className="heroActions">
-          <a className="btn primary" href="#registration">Записаться на курс</a>
-          <a className="btn secondary" href="#program">Посмотреть программу</a>
         </div>
         <div className="heroCountdown">
           <span className="countdownLabel">До начала курса осталось</span>
