@@ -3,8 +3,10 @@ const attributionStorageKey = 'pm_attribution_v1'
 
 type GoalParams = Record<string, string | number | boolean>
 
+type MetrikaOptions = Record<string, string | boolean>
+
 type MetrikaFunction = {
-  (counter: number, method: 'init', options: Record<string, boolean>): void
+  (counter: number, method: 'init', options: MetrikaOptions): void
   (counter: number, method: 'reachGoal', goal: string, params?: GoalParams): void
   a?: IArguments[]
   l?: number
@@ -30,10 +32,14 @@ export function initMetrika() {
   ym.l = Date.now()
   window.ym = ym
   window.ym(counterId, 'init', {
+    ssr: true,
+    webvisor: true,
     clickmap: true,
-    trackLinks: true,
+    ecommerce: 'dataLayer',
+    referrer: document.referrer,
+    url: window.location.href,
     accurateTrackBounce: true,
-    webvisor: true
+    trackLinks: true,
   })
 
   const loadScript = () => {
@@ -42,7 +48,7 @@ export function initMetrika() {
     const script = document.createElement('script')
     script.async = true
     script.dataset.yandexMetrika = 'true'
-    script.src = 'https://mc.yandex.ru/metrika/tag.js'
+    script.src = `https://mc.yandex.ru/metrika/tag.js?id=${counterId}`
     document.head.append(script)
   }
 
