@@ -1696,3 +1696,23 @@ footer a:hover {
     font-size: 21px;
   }
 }
+
+
+.versionBadge {
+  flex: 0 0 auto;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+@media (max-width: 600px) {
+  .versionBadge {
+    padding: 6px 8px;
+    font-size: 10px;
+  }
+}

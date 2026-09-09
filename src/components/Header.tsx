@@ -48,6 +48,7 @@ export function Header() {
       <a className="brand" href="#top" aria-label="Путь мужчины — перейти к началу страницы">
         <img src={logo} alt="Логотип курса Путь мужчины" />
       </a>
+      <span className="versionBadge" aria-label="Версия сайта 2.0.0">v2.0.0</span>
       <nav className="nav" aria-label="Основная навигация">
         {navigation.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}
       </nav>
