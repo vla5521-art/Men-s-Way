@@ -67,7 +67,7 @@ export function Sections() {
         <div className="sectionInner">
           <SectionHeading
             kicker="Программа курса"
-            title="Два месяца практической работы"
+            title="Два месяца практики"
           />
           <div className="moduleGrid">
             {programModules.map((module) => (
