@@ -920,6 +920,30 @@ summary {
   background: linear-gradient(135deg, #152638, #0d1825);
 }
 
+.costSection {
+  background:
+    radial-gradient(circle at 82% 20%, rgba(196, 154, 90, 0.14), transparent 34%),
+    #0b1724 !important;
+}
+
+.costInner {
+  max-width: 1040px;
+}
+
+.costSection h2 {
+  max-width: 900px;
+}
+
+.costText {
+  max-width: 860px;
+  margin: 0;
+  padding: 24px 0 24px 28px;
+  border-left: 2px solid var(--gold);
+  color: #dbe0e6;
+  font-size: 19px;
+  line-height: 1.75;
+}
+
 .registrationGrid {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
@@ -1372,6 +1396,12 @@ footer a:hover {
 
   .registrationChoices {
     padding: 25px 20px;
+  }
+
+  .costText {
+    padding: 18px 0 18px 20px;
+    font-size: 16px;
+    line-height: 1.65;
   }
 
   .contactRow {

@@ -48,11 +48,11 @@ export function Header() {
       <a className="brand" href="#top" aria-label="Путь мужчины — перейти к началу страницы">
         <img src={logo} alt="Логотип курса Путь мужчины" />
       </a>
-      <span className="versionBadge" aria-label="Версия сайта 2.0.1">v2.0.1</span>
+      <span className="versionBadge" aria-label="Версия сайта 2.1.0">v2.1.0</span>
       <nav className="nav" aria-label="Основная навигация">
         {navigation.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}
       </nav>
-      <a className="headerCta" href="#registration">Записаться</a>
+      <a className="headerCta" href="#registration" data-analytics-event="REGISTRATION_INTENT" data-analytics-placement="header_desktop">Записаться</a>
       <button
         ref={menuButtonRef}
         className={`menuBtn${open ? ' isOpen' : ''}`}
@@ -74,7 +74,7 @@ export function Header() {
         aria-hidden={!open}
       >
         {navigation.map((item) => <a key={item.href} href={item.href} onClick={closeMenu}>{item.label}</a>)}
-        <a className="btn primary" href="#registration" onClick={closeMenu}>Записаться на курс</a>
+        <a className="btn primary" href="#registration" onClick={closeMenu} data-analytics-event="REGISTRATION_INTENT" data-analytics-placement="header_mobile">Записаться на курс</a>
       </nav>
     </header>
   )

@@ -30,6 +30,7 @@ export const navigation = [
   { label: 'Для кого', href: '#for-whom' },
   { label: 'Программа', href: '#program' },
   { label: 'Результат', href: '#results' },
+  { label: 'Стоимость', href: '#cost' },
   { label: 'Регистрация', href: '#registration' }
 ]
 

@@ -14,8 +14,8 @@ export function Hero() {
         <p className="slogan">Как стать опорой для себя, семьи и своего дела — без постоянного напряжения и необходимости всё контролировать.</p>
         <p className="lead">Для мужчин, которые хотят укрепить характер, разобраться в отношениях и увидеть направление дальнейшего развития.</p>
         <div className="heroActions">
-          <a className="btn primary" href="#registration">Записаться на курс</a>
-          <a className="btn secondary" href="#about">Узнать о курсе</a>
+          <a className="btn primary" href="#registration" data-analytics-event="REGISTRATION_INTENT" data-analytics-placement="hero">Записаться на курс</a>
+          <a className="btn secondary" href="#about" data-analytics-event="COURSE_DETAILS" data-analytics-placement="hero">Узнать о курсе</a>
         </div>
         <div className="facts" aria-label="Параметры курса">
           <Fact icon="calendar" label="Старт" value={course.start} />

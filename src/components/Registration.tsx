@@ -18,7 +18,14 @@ export function Registration() {
 
 function RegistrationPlaceholder({ platform, label }: { platform: 'telegram' | 'vk'; label: string }) {
   return (
-    <button className={`registrationChoice ${platform}`} type="button" disabled aria-disabled="true">
+    <button
+      className={`registrationChoice ${platform}`}
+      type="button"
+      disabled
+      aria-disabled="true"
+      data-analytics-event={platform === 'telegram' ? 'CLICK_TELEGRAM' : 'CLICK_VK'}
+      data-analytics-placement="registration"
+    >
       <PlatformIcon platform={platform} />
       <span className="registrationChoiceText">
         <strong>{label}</strong>
