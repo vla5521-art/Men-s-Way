@@ -52,10 +52,10 @@ export function Sections() {
 
       <section className="section contrastSection" aria-labelledby="contrast-title">
         <div className="sectionInner">
-          <SectionHeading
-            kicker="Два состояния"
-            title="От жизни на автомате — к осознанному движению"
-          />
+          <div className="sectionHeading">
+            <p className="kicker">Два состояния</p>
+            <h2 id="contrast-title">От жизни на автомате —<br />к осознанному движению</h2>
+          </div>
           <div className="contrastGrid">
             <FlowCard title="Когда мужчина живёт на автомате" items={automaticState} tone="negative" />
             <FlowCard title="Когда мужчина понимает свою роль" items={consciousState} tone="positive" />
