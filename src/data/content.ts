@@ -14,6 +14,8 @@ export type ResultCard = {
   text: string
 }
 
+export const siteVersion = '3.0.1'
+
 export const course = {
   title: 'Путь мужчины',
   eyebrow: 'Двухмесячный практический онлайн-курс',
