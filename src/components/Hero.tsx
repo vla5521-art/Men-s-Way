@@ -11,7 +11,7 @@ export function Hero() {
       <div className="heroContent">
         <p className="eyebrow">{course.eyebrow}</p>
         <h1>{course.title}</h1>
-        <p className="slogan">Как стать опорой для себя, семьи и своего дела — без постоянного напряжения и необходимости всё контролировать.</p>
+        <p className="slogan">От поиска внутренней опоры — к уверенности в решениях, доверию в отношениях и осмысленному движению вперёд.</p>
         <p className="lead">Для мужчин, которые хотят укрепить характер, разобраться в отношениях и увидеть направление дальнейшего развития.</p>
         <div className="heroActions">
           <a className="btn primary" href="#registration" data-analytics-event="REGISTRATION_INTENT" data-analytics-placement="hero">Записаться на курс</a>

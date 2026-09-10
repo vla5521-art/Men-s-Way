@@ -17,7 +17,7 @@ export function Sections() {
         <div className="sectionInner">
           <SectionHeading
             kicker="Честный взгляд на себя"
-            title="Возможно, ты узнаешь себя"
+            title="Возможно, Вы узнаете себя"
             text="Не обязательно находиться в кризисе, чтобы начать менять свою жизнь."
           />
           <ul className="signalGrid">
@@ -31,7 +31,7 @@ export function Sections() {
         <div className="sectionInner audienceLayout">
           <SectionHeading
             kicker="Для кого этот курс"
-            title="Этот курс для тебя, если ты…"
+            title="Этот курс для Вас, если Вы…"
             text="«Путь мужчины» — пространство, где можно остановиться, честно посмотреть на свою жизнь и понять, куда двигаться дальше."
           />
           <ul className="audienceList">
@@ -44,7 +44,7 @@ export function Sections() {
         <div className="sectionInner">
           <SectionHeading
             kicker="С чего мы начнём курс"
-            title="Точка старта — твоя текущая реальность"
+            title="Точка старта — Ваша текущая реальность"
           />
           <CardGrid items={startingPoints} />
         </div>
@@ -89,8 +89,8 @@ export function Sections() {
         <div className="sectionInner">
           <SectionHeading
             kicker="Результат"
-            title="После курса ты сможешь"
-            text="Применять полученные знания в отношениях, решениях и повседневных действиях."
+            title="К чему мы будем двигаться"
+            text="Через знания, практику и их применение в отношениях, решениях и повседневных действиях."
           />
           <div className="courseResultsGrid">
             {courseResults.map((item) => (
@@ -107,8 +107,7 @@ export function Sections() {
       <section className="section manifesto" aria-label="Главная идея курса">
         <div className="sectionInner">
           <p>Мужчина не обязан знать все ответы.</p>
-          <h2>Но он должен быть готов задавать себе честные вопросы.</h2>
-          <span>С этого начинается путь.</span>
+          <h2>Путь начинается с готовности задавать себе честные вопросы.</h2>
         </div>
       </section>
     </>
