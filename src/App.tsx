@@ -4,6 +4,7 @@ import { Analytics } from './components/Analytics'
 import { Cost } from './components/Cost'
 import { Registration } from './components/Registration'
 import { Sections } from './components/Sections'
+import { course } from './data/content'
 import './styles/global.css'
 
 export default function App() {
@@ -23,7 +24,7 @@ export default function App() {
             <h2>Готовы начать с честного вопроса?</h2>
             <p>Включайтесь в практическую работу над характером, отношениями, масштабом и направлением своей жизни.</p>
             <a className="btn primary" href="#registration" data-analytics-event="REGISTRATION_INTENT" data-analytics-placement="final_cta">Записаться на курс</a>
-            <span>Старт — 5 октября 2026 года. Формат — онлайн.</span>
+            <span>Старт — {course.start}. Формат — {course.format.toLowerCase()}.</span>
           </div>
         </section>
       </main>
