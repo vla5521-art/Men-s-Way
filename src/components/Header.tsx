@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import logo from '../assets/logo-dark.jpg'
+import logo from '../assets/logo-light.webp'
 import { navigation } from '../data/content'
 
 export function Header() {
@@ -48,7 +48,7 @@ export function Header() {
       <a className="brand" href="#top" aria-label="Путь мужчины — перейти к началу страницы">
         <img src={logo} alt="Логотип курса Путь мужчины" />
       </a>
-      <span className="versionBadge" aria-label="Версия сайта 2.1.1">v2.1.1</span>
+      <span className="versionBadge" aria-label="Версия сайта 3.0.0">v3.0.0</span>
       <nav className="nav" aria-label="Основная навигация">
         {navigation.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}
       </nav>

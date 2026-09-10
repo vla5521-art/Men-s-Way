@@ -1,5 +1,5 @@
-import community from '../assets/community.webp'
-import communityMobile from '../assets/community-mobile.webp'
+import masterHero from '../assets/master-hero.webp'
+import heroScene from '../assets/hero-scene.webp'
 import { course } from '../data/content'
 import { Countdown } from './Countdown'
 
@@ -9,9 +9,9 @@ export function Hero() {
   return (
     <section className="hero" id="top">
       <div className="heroContent">
-        <p className="eyebrow">{course.eyebrow}</p>
+        <p className="eyebrow">Онлайн-курс</p>
         <h1>{course.title}</h1>
-        <p className="slogan">От поиска внутренней опоры — к уверенности в решениях, доверию в отношениях и осмысленному движению вперёд.</p>
+        <p className="slogan">Сила характера —<br />масштаб и реализация</p>
         <p className="lead">Для мужчин, которые хотят укрепить характер, разобраться в отношениях и увидеть направление дальнейшего развития.</p>
         <div className="heroActions">
           <a className="btn primary" href="#registration" data-analytics-event="REGISTRATION_INTENT" data-analytics-placement="hero">Записаться на курс</a>
@@ -30,11 +30,9 @@ export function Hero() {
       </div>
       <div className="heroVisual" aria-hidden="true">
         <picture>
-          <source media="(max-width: 700px)" srcSet={communityMobile} />
-          <img src={community} alt="" />
+          <source media="(min-width: 901px)" srcSet={heroScene} />
+          <img src={masterHero} alt="" />
         </picture>
-        <div className="pathLine pathOne" />
-        <div className="pathLine pathTwo" />
       </div>
     </section>
   )
