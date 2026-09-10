@@ -25,7 +25,7 @@ export function Hero() {
         <div className="heroCountdown">
           <span className="countdownLabel">До начала курса осталось</span>
           <Countdown />
-          <p>Старт программы — 5 октября 2026 года.</p>
+          <p>Старт программы — {course.start}.</p>
         </div>
       </div>
       <div className="heroVisual" aria-hidden="true">
