@@ -341,8 +341,8 @@ button, a, input, summary { -webkit-tap-highlight-color: transparent; }
 .registrationGrid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 76px; }
 .registrationGrid > div > p:last-child { max-width: 520px; color: var(--muted); font-size: 18px; line-height: 1.75; }
 .registrationChoices { display: grid; gap: 16px; align-self: center; padding: 34px; border: 1px solid var(--line); background: var(--paper); box-shadow: var(--shadow); }
-.registrationChoice { display: flex; align-items: center; width: 100%; gap: 18px; padding: 20px 22px; border: 1px solid var(--line-strong); color: var(--ink); background: #fbf7ef; text-align: left; }
-.registrationChoice:disabled { cursor: not-allowed; opacity: .68; }
+.registrationChoice { display: flex; align-items: center; width: 100%; gap: 18px; padding: 20px 22px; border: 1px solid var(--line-strong); color: var(--ink); background: #fbf7ef; text-align: left; transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease; }
+.registrationChoice:hover { border-color: var(--gold); box-shadow: 0 12px 30px rgba(86, 60, 31, .12); transform: translateY(-2px); }
 .registrationChoice svg { flex: 0 0 auto; width: 42px; height: 42px; fill: var(--gold); }
 .registrationChoice .platformIconDetail { fill: #fbf7ef; }
 .registrationChoiceText { display: grid; gap: 5px; }

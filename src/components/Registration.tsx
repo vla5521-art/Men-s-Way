@@ -1,3 +1,5 @@
+import { registrationLinks } from '../data/content'
+
 export function Registration() {
   return (
     <section className="registration" id="registration">
@@ -5,33 +7,41 @@ export function Registration() {
         <div>
           <p className="kicker">Путь мужчины</p>
           <h2>Регистрация</h2>
-          <p>Выберите удобную площадку для участия. Ссылки на регистрацию будут добавлены в ближайшее время.</p>
+          <p>Выберите удобную площадку и перейдите к регистрации.</p>
         </div>
         <div className="registrationChoices" aria-label="Способы регистрации">
-          <RegistrationPlaceholder platform="telegram" label="Участие в Telegram" />
-          <RegistrationPlaceholder platform="vk" label="Участие в VK" />
+          <RegistrationLink platform="telegram" label="Участие в Telegram" href={registrationLinks.telegram} />
+          <RegistrationLink platform="vk" label="Участие в VK" href={registrationLinks.vk} />
         </div>
       </div>
     </section>
   )
 }
 
-function RegistrationPlaceholder({ platform, label }: { platform: 'telegram' | 'vk'; label: string }) {
+function RegistrationLink({
+  platform,
+  label,
+  href
+}: {
+  platform: 'telegram' | 'vk'
+  label: string
+  href: string
+}) {
   return (
-    <button
+    <a
       className={`registrationChoice ${platform}`}
-      type="button"
-      disabled
-      aria-disabled="true"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       data-analytics-event={platform === 'telegram' ? 'CLICK_TELEGRAM' : 'CLICK_VK'}
       data-analytics-placement="registration"
     >
       <PlatformIcon platform={platform} />
       <span className="registrationChoiceText">
         <strong>{label}</strong>
-        <small>Ссылка скоро появится</small>
+        <small>Перейти к регистрации</small>
       </span>
-    </button>
+    </a>
   )
 }
 

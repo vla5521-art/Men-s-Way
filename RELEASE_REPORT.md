@@ -1,11 +1,16 @@
-# Release report — Men-s-Way v3.0.1
+# Release report — Men-s-Way v3.0.2
 
 ## Changes
+
+- Activated the Telegram and VK registration buttons with the approved RazumLife URLs.
+- Preserved the existing Yandex Metrika click goals for both registration channels.
+- Updated the visible and package version to `3.0.2`.
+
+## Preserved from v3.0.1
 
 - Removed the remaining obsolete September start date from project documentation.
 - Centralized every visible course date on the single approved value: `5 октября 2026 года`.
 - Confirmed that page metadata and the countdown target use the same approved start date.
-- Updated the visible and package version to `3.0.1`.
 
 ## Preserved from v3.0.0
 

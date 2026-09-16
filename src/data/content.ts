@@ -14,7 +14,12 @@ export type ResultCard = {
   text: string
 }
 
-export const siteVersion = '3.0.1'
+export const siteVersion = '3.0.2'
+
+export const registrationLinks = {
+  telegram: 'https://razumlife.space/Put_Men_TG/',
+  vk: 'https://razumlife.space/Put_Men_VK/'
+} as const
 
 export const course = {
   title: 'Путь мужчины',
