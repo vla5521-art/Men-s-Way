@@ -17,8 +17,8 @@ export function Sections() {
         <div className="sectionInner">
           <SectionHeading
             kicker="Честный взгляд на себя"
-            title="Возможно, Вы узнаете себя"
-            text="Не обязательно находиться в кризисе, чтобы начать менять свою жизнь."
+            title="Возможно, что-то из этого вам знакомо"
+            text="Не обязательно ждать кризиса, чтобы внимательнее посмотреть на себя и свою жизнь."
           />
           <ul className="signalGrid">
             {painPoints.map((point) => <li key={point}>{point}</li>)}
@@ -44,7 +44,7 @@ export function Sections() {
         <div className="sectionInner">
           <SectionHeading
             kicker="С чего мы начнём курс"
-            title="Точка старта — Ваша текущая реальность"
+            title="Внимательный взгляд на свою жизнь"
           />
           <CardGrid items={startingPoints} />
         </div>
@@ -54,11 +54,11 @@ export function Sections() {
         <div className="sectionInner">
           <div className="sectionHeading">
             <p className="kicker">Два состояния</p>
-            <h2 id="contrast-title">От жизни на автомате —<br />к осознанному движению</h2>
+            <h2 id="contrast-title">От привычных реакций —<br />к осознанному выбору</h2>
           </div>
           <div className="contrastGrid">
-            <FlowCard title="Когда мужчина живёт на автомате" items={automaticState} tone="negative" />
-            <FlowCard title="Когда мужчина понимает свою роль" items={consciousState} tone="positive" />
+            <FlowCard title="Когда срабатывает привычный сценарий" items={automaticState} tone="negative" />
+            <FlowCard title="Когда появляется пространство для выбора" items={consciousState} tone="positive" />
           </div>
         </div>
       </section>
@@ -100,14 +100,14 @@ export function Sections() {
               </article>
             ))}
           </div>
-          <p className="resultTrajectory">От ограничений и напряжения — к внутренней устойчивости, осмысленной жизни и духовному развитию.</p>
+          <p className="resultTrajectory">К внутренней устойчивости, осмысленным решениям, более глубоким отношениям и духовному развитию.</p>
         </div>
       </section>
 
       <section className="section manifesto" aria-label="Главная идея курса">
         <div className="sectionInner">
-          <p>Мужчина не обязан знать все ответы.</p>
-          <h2>Путь начинается с готовности задавать себе честные вопросы.</h2>
+          <p>Ответы становятся яснее, когда мужчина задаёт себе честные вопросы.</p>
+          <h2>Путь начинается с готовности увидеть больше и сделать собственный выбор.</h2>
         </div>
       </section>
     </>
@@ -118,7 +118,7 @@ function SectionHeading({ kicker, title, text }: { kicker: string; title: string
   return (
     <div className="sectionHeading">
       <p className="kicker">{kicker}</p>
-      <h2 id={title === 'От жизни на автомате — к осознанному движению' ? 'contrast-title' : undefined}>{title}</h2>
+      <h2>{title}</h2>
       {text ? <p className="sectionLead">{text}</p> : null}
     </div>
   )
