@@ -14,7 +14,7 @@ export type ResultCard = {
   text: string
 }
 
-export const siteVersion = '3.0.3'
+export const siteVersion = '3.0.4'
 
 export const registrationLinks = {
   telegram: 'https://razumlife.space/Put_Men_TG/',

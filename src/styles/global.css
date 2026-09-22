@@ -371,13 +371,18 @@ footer a:hover { color: var(--gold-pale); }
 }
 
 @media (max-width: 900px) {
+  .header {
+    background: #faf7f0;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
   .nav, .headerCta { display: none; }
   .menuBtn { position: relative; z-index: 3; display: flex; flex-direction: column; gap: 5px; margin-left: auto; padding: 11px; border: 0; background: none; }
   .menuBtn span { display: block; width: 28px; height: 2px; background: var(--gold); transition: transform 180ms ease, opacity 180ms ease; }
   .menuBtn.isOpen span:first-child { transform: translateY(7px) rotate(45deg); }
   .menuBtn.isOpen span:nth-child(2) { opacity: 0; }
   .menuBtn.isOpen span:last-child { transform: translateY(-7px) rotate(-45deg); }
-  .mobileMenu { position: fixed; z-index: 2; inset: 0; display: none; flex-direction: column; gap: 22px; padding: 120px 28px 40px; color: var(--ink); background: rgba(250, 247, 240, .99); font-family: Georgia, 'Times New Roman', serif; font-size: 25px; }
+  .mobileMenu { position: fixed; z-index: 2; inset: 0; display: none; min-height: 100vh; min-height: 100dvh; flex-direction: column; gap: 22px; padding: 120px 28px 40px; overflow-y: auto; overscroll-behavior: contain; color: var(--ink); background: #faf7f0; box-shadow: 0 24px 70px rgba(31, 23, 15, .18); font-family: Georgia, 'Times New Roman', serif; font-size: 25px; }
   .mobileMenu.isOpen { display: flex; }
   .mobileMenu .btn { width: fit-content; margin-top: 12px; font-family: Montserrat, Inter, Arial, sans-serif; font-size: 16px; }
 
