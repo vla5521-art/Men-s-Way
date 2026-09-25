@@ -9,6 +9,7 @@ import {
   startingPoints,
   type ContentCard
 } from '../data/content'
+import razumLifeLogo from '../assets/razum-life-logo.webp'
 
 export function Sections() {
   return (
@@ -101,6 +102,31 @@ export function Sections() {
             ))}
           </div>
           <p className="resultTrajectory">К внутренней устойчивости, осмысленным решениям, более глубоким отношениям и духовному развитию.</p>
+        </div>
+      </section>
+
+      <section className="section provenanceSection" aria-labelledby="razum-life-title">
+        <div className="sectionInner provenancePanel">
+          <div className="provenanceLogo" aria-hidden="true">
+            <img src={razumLifeLogo} alt="" />
+          </div>
+          <div className="provenanceContent">
+            <p className="kicker">Проект Razum Life</p>
+            <h2 id="razum-life-title">«Путь мужчины» — проект Razum Life</h2>
+            <p className="sectionLead">
+              Razum Life — международное общественное движение и сообщество образовательных проектов,
+              направленных на развитие личности, укрепление семьи и повышение качества жизни.
+            </p>
+            <a
+              className="provenanceLink"
+              href="https://razumlife.com/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Познакомиться с Razum Life — сайт откроется в новой вкладке"
+            >
+              Познакомиться с Razum Life <span aria-hidden="true">↗</span>
+            </a>
+          </div>
         </div>
       </section>
 
