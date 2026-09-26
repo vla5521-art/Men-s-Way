@@ -272,7 +272,7 @@ function TestIntro({
       <div className="testIntroCopy">
         <p className="kicker">Короткая практика · 7–10 минут</p>
         <h1 ref={headingRef} id="test-title" tabIndex={-1}>На что Вы можете опереться сейчас?</h1>
-        <p className="testIntroLead">27 вопросов помогут увидеть Ваши сильные стороны и определить направление, которому сейчас стоит уделить больше внимания.</p>
+        <p className="testIntroLead">Эта практика поможет увидеть Ваши сильные стороны и определить направление, которому сейчас стоит уделить больше внимания.</p>
         <div className="testFacts" aria-label="Особенности практики">
           <span>Анонимно</span>
           <span>Без регистрации</span>
