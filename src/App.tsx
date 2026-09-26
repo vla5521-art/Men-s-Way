@@ -4,10 +4,22 @@ import { Analytics } from './components/Analytics'
 import { Cost } from './components/Cost'
 import { Registration } from './components/Registration'
 import { Sections } from './components/Sections'
+import { TestPage } from './components/TestPage'
 import { course } from './data/content'
 import './styles/global.css'
 
 export default function App() {
+  const path = window.location.pathname.replace(/\/+$/, '') || '/'
+
+  if (path === '/test') {
+    return (
+      <>
+        <Analytics />
+        <TestPage />
+      </>
+    )
+  }
+
   return (
     <>
       <Analytics />

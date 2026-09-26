@@ -86,6 +86,22 @@ export function Sections() {
         </div>
       </section>
 
+      <section className="section testInvitation" aria-labelledby="test-invitation-title">
+        <div className="sectionInner testInvitationPanel">
+          <div className="testInvitationCopy">
+            <p className="kicker">Короткая практика · 7–10 минут</p>
+            <h2 id="test-invitation-title">На что Вы можете опереться сейчас?</h2>
+            <p>27 вопросов помогут увидеть Ваши сильные стороны и определить направление, которому сейчас стоит уделить больше внимания.</p>
+            <a className="btn primary" href="/test">Узнать свои точки опоры</a>
+            <span>Анонимно · без регистрации · результат сразу</span>
+          </div>
+          <div className="testInvitationMark" aria-hidden="true">
+            <strong>6</strong>
+            <span>сфер<br />жизни</span>
+          </div>
+        </div>
+      </section>
+
       <section className="section results" id="results">
         <div className="sectionInner">
           <SectionHeading
