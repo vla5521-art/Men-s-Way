@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import logo from '../assets/logo-light.webp'
+import { course } from '../data/content'
 import { testAnswers, testDomains, testQuestions, type TestDomain } from '../data/test'
 import { reachGoal } from '../services/analytics'
 
@@ -349,6 +350,7 @@ function TestResult({
       <div className="testCourseOffer">
         <p className="kicker">Продолжить исследование</p>
         <h2>«Путь мужчины» — два месяца практики</h2>
+        <p className="testCourseStart">Старт курса — {course.start}</p>
         <p>На курсе мы не даём готовых рецептов. Через разговор, опыт и взаимодействие каждый участник сможет глубже увидеть себя, свои отношения и определить следующий шаг. Участие — за добровольное пожертвование, без обязательной оплаты.</p>
         <div className="testCourseActions">
           <a className="btn secondary" href="/#program" data-analytics-event="TEST_COURSE_INFO" data-analytics-placement="test_result">Узнать о курсе</a>

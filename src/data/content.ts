@@ -14,7 +14,7 @@ export type ResultCard = {
   text: string
 }
 
-export const siteVersion = '3.1.1'
+export const siteVersion = '3.2.0'
 
 export const registrationLinks = {
   telegram: 'https://razumlife.space/Put_Men_TG/',
@@ -26,8 +26,8 @@ export const course = {
   eyebrow: 'Двухмесячный практический онлайн-курс',
   description:
     'Мы не даём готовых рецептов. Через разговор, опыт и взаимодействие друг с другом каждый сможет увидеть больше в себе, своих отношениях и событиях жизни — и самостоятельно определить следующий шаг.',
-  start: '5 октября 2026 года',
-  startAt: '2026-10-05T08:00:00+03:00',
+  start: '15 ноября 2026 года',
+  startAt: '2026-11-15T08:00:00+03:00',
   duration: '2 месяца',
   format: 'Онлайн'
 }
