@@ -14,7 +14,14 @@ export type ResultCard = {
   text: string
 }
 
-export const siteVersion = '3.2.1'
+export type CourseStep = {
+  number: string
+  title: string
+  start: string
+  finish: string
+}
+
+export const siteVersion = '3.3.0'
 
 export const registrationLinks = {
   telegram: 'https://razumlife.space/Put_Men_TG/',
@@ -28,9 +35,30 @@ export const course = {
     'Мы не даём готовых рецептов. Через разговор, опыт и взаимодействие друг с другом каждый сможет увидеть больше в себе, своих отношениях и событиях жизни — и самостоятельно определить следующий шаг.',
   start: '15 ноября 2026 года',
   startAt: '2026-11-15T08:00:00+03:00',
-  duration: '2 месяца',
+  duration: '3 шага',
   format: 'Онлайн'
 }
+
+export const courseSteps: CourseStep[] = [
+  {
+    number: '1',
+    title: 'Сила характера',
+    start: '15 ноября',
+    finish: '15 декабря'
+  },
+  {
+    number: '2',
+    title: '4M Challenge',
+    start: '3 января',
+    finish: '9 января'
+  },
+  {
+    number: '3',
+    title: 'Масштаб и реализация',
+    start: '01 февраля',
+    finish: '28 февраля'
+  }
+]
 
 export const navigation = [
   { label: 'О курсе', href: '#about' },

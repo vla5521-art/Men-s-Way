@@ -4,6 +4,7 @@ import {
   consciousState,
   course,
   courseResults,
+  courseSteps,
   painPoints,
   programModules,
   startingPoints,
@@ -15,16 +16,30 @@ export function Sections() {
   return (
     <>
       <section className="section painSection" id="about">
-        <div className="sectionInner">
-          <SectionHeading
-            kicker="Честный взгляд на себя"
-            title="Возможно, что-то из этого вам знакомо"
-            text="Не обязательно ждать кризиса, чтобы внимательнее посмотреть на себя и свою жизнь."
-          />
-          <ul className="signalGrid">
-            {painPoints.map((point) => <li key={point}>{point}</li>)}
-          </ul>
-          <p className="sectionConclusion">{course.description}</p>
+        <div className="sectionInner aboutLayout">
+          <div className="aboutContent">
+            <SectionHeading
+              kicker="Честный взгляд на себя"
+              title="Возможно, что-то из этого вам знакомо"
+              text="Не обязательно ждать кризиса, чтобы внимательнее посмотреть на себя и свою жизнь."
+            />
+            <ul className="signalGrid">
+              {painPoints.map((point) => <li key={point}>{point}</li>)}
+            </ul>
+            <p className="sectionConclusion">{course.description}</p>
+          </div>
+          <aside className="courseSteps" aria-label="Шаги курса">
+            {courseSteps.map((step) => (
+              <article className="courseStep" key={step.number}>
+                <p>Шаг {step.number}</p>
+                <h3>{step.title}</h3>
+                <dl>
+                  <div><dt>Старт</dt><dd>{step.start}</dd></div>
+                  <div><dt>Финиш</dt><dd>{step.finish}</dd></div>
+                </dl>
+              </article>
+            ))}
+          </aside>
         </div>
       </section>
 
