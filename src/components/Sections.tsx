@@ -4,27 +4,51 @@ import {
   consciousState,
   course,
   courseResults,
+  courseSteps,
   painPoints,
   programModules,
   startingPoints,
   type ContentCard
 } from '../data/content'
+import alexanderHakimov from '../assets/alexander-hakimov.webp'
+import marinaTargakova from '../assets/marina-targakova.webp'
 import razumLifeLogo from '../assets/razum-life-logo.webp'
+import sergeyAvakov from '../assets/sergey-avakov.webp'
+
+const speakers = [
+  { name: 'Марина Таргакова', image: marinaTargakova },
+  { name: 'Александр Хакимов', image: alexanderHakimov },
+  { name: 'Сергей Аваков', image: sergeyAvakov }
+]
 
 export function Sections() {
   return (
     <>
       <section className="section painSection" id="about">
-        <div className="sectionInner">
-          <SectionHeading
-            kicker="Честный взгляд на себя"
-            title="Возможно, что-то из этого вам знакомо"
-            text="Не обязательно ждать кризиса, чтобы внимательнее посмотреть на себя и свою жизнь."
-          />
-          <ul className="signalGrid">
-            {painPoints.map((point) => <li key={point}>{point}</li>)}
-          </ul>
-          <p className="sectionConclusion">{course.description}</p>
+        <div className="sectionInner aboutLayout">
+          <div className="aboutContent">
+            <SectionHeading
+              kicker="Честный взгляд на себя"
+              title="Возможно, что-то из этого вам знакомо"
+              text="Не обязательно ждать кризиса, чтобы внимательнее посмотреть на себя и свою жизнь."
+            />
+            <ul className="signalGrid">
+              {painPoints.map((point) => <li key={point}>{point}</li>)}
+            </ul>
+            <p className="sectionConclusion">{course.description}</p>
+          </div>
+          <aside className="courseSteps" aria-label="Шаги курса">
+            {courseSteps.map((step) => (
+              <article className="courseStep" key={step.number}>
+                <p>Шаг {step.number}</p>
+                <h3>{step.title}</h3>
+                <dl>
+                  <div><dt>Старт</dt><dd>{step.start}</dd></div>
+                  <div><dt>Финиш</dt><dd>{step.finish}</dd></div>
+                </dl>
+              </article>
+            ))}
+          </aside>
         </div>
       </section>
 
@@ -80,6 +104,26 @@ export function Sections() {
                 <ol>
                   {module.topics.map((topic) => <li key={topic}>{topic}</li>)}
                 </ol>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section speakersSection" id="speakers">
+        <div className="sectionInner">
+          <SectionHeading
+            kicker="Люди проекта"
+            title="Спикеры курса"
+          />
+          <div className="speakerGrid">
+            {speakers.map((speaker) => (
+              <article className="speakerCard" key={speaker.name}>
+                <img
+                  src={speaker.image}
+                  alt={speaker.name}
+                />
+                <h3>{speaker.name}</h3>
               </article>
             ))}
           </div>

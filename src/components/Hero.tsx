@@ -1,5 +1,4 @@
-import masterHero from '../assets/master-hero.webp'
-import heroScene from '../assets/hero-scene.webp'
+import svantaPriyaHero from '../assets/svanta-priya-hero.webp'
 import { course } from '../data/content'
 import { Countdown } from './Countdown'
 
@@ -9,7 +8,7 @@ export function Hero() {
   return (
     <section className="hero" id="top">
       <div className="heroContent">
-        <p className="eyebrow">Онлайн-курс</p>
+        <p className="eyebrow">Практический онлайн-курс</p>
         <h1>{course.title}</h1>
         <p className="slogan">Сила характера —<br />масштаб и реализация</p>
         <p className="lead">Для мужчин, которые хотят укрепить характер, разобраться в отношениях и увидеть направление дальнейшего развития.</p>
@@ -29,10 +28,7 @@ export function Hero() {
         </div>
       </div>
       <div className="heroVisual" aria-hidden="true">
-        <picture>
-          <source media="(min-width: 901px)" srcSet={heroScene} />
-          <img src={masterHero} alt="" />
-        </picture>
+        <img src={svantaPriyaHero} alt="" />
       </div>
     </section>
   )
