@@ -16,7 +16,7 @@ import razumLifeLogo from '../assets/razum-life-logo.webp'
 import sergeyAvakov from '../assets/sergey-avakov.webp'
 
 const speakers = [
-  { name: 'Марина Таргакова', image: marinaTargakova, imageClassName: 'marina' },
+  { name: 'Марина Таргакова', image: marinaTargakova },
   { name: 'Александр Хакимов', image: alexanderHakimov },
   { name: 'Сергей Аваков', image: sergeyAvakov }
 ]
@@ -120,7 +120,6 @@ export function Sections() {
             {speakers.map((speaker) => (
               <article className="speakerCard" key={speaker.name}>
                 <img
-                  className={speaker.imageClassName}
                   src={speaker.image}
                   alt={speaker.name}
                 />
