@@ -1,5 +1,4 @@
 import {
-  audiencePoints,
   automaticState,
   consciousState,
   course,
@@ -11,6 +10,7 @@ import {
   type ContentCard
 } from '../data/content'
 import alexanderHakimov from '../assets/alexander-hakimov.webp'
+import communityPhoto from '../assets/community-team.webp'
 import marinaTargakova from '../assets/marina-targakova.webp'
 import razumLifeLogo from '../assets/razum-life-logo.webp'
 import sergeyAvakov from '../assets/sergey-avakov.webp'
@@ -28,9 +28,9 @@ export function Sections() {
         <div className="sectionInner aboutLayout">
           <div className="aboutContent">
             <SectionHeading
-              kicker="Честный взгляд на себя"
-              title="Возможно, что-то из этого вам знакомо"
-              text="Не обязательно ждать кризиса, чтобы внимательнее посмотреть на себя и свою жизнь."
+              kicker="Для кого этот курс"
+              title="Возможно, этот курс для Вас"
+              text="Не обязательно ждать кризиса, чтобы внимательнее посмотреть на себя, отношения и следующий этап жизни."
             />
             <ul className="signalGrid">
               {painPoints.map((point) => <li key={point}>{point}</li>)}
@@ -49,19 +49,6 @@ export function Sections() {
               </article>
             ))}
           </aside>
-        </div>
-      </section>
-
-      <section className="section audienceSection" id="for-whom">
-        <div className="sectionInner audienceLayout">
-          <SectionHeading
-            kicker="Для кого этот курс"
-            title="Этот курс для Вас, если Вы…"
-            text="«Путь мужчины» — пространство, где можно остановиться, честно посмотреть на свою жизнь и понять, куда двигаться дальше."
-          />
-          <ul className="audienceList">
-            {audiencePoints.map((point) => <li key={point}>{point}</li>)}
-          </ul>
         </div>
       </section>
 
@@ -171,29 +158,32 @@ export function Sections() {
             <img src={razumLifeLogo} alt="" />
           </div>
           <div className="provenanceContent">
-            <p className="kicker">Проект Razum Life</p>
-            <h2 id="razum-life-title">«Путь мужчины» — проект Razum Life</h2>
+            <p className="kicker">Среда, из которой вырос курс</p>
+            <h2 id="razum-life-title">«Путь мужчины» — часть сообщества Razum Life</h2>
             <p className="sectionLead">
-              Razum Life — международное общественное движение и сообщество образовательных проектов,
-              направленных на развитие личности, укрепление семьи и повышение качества жизни.
+              Razum Life объединяет людей, которым важно жить осознанно, строить крепкие семьи и расти через честный диалог. Поэтому курс строится не вокруг готовых советов, а вокруг личной практики, общения и поддержки.
             </p>
+            <p className="provenanceNote">Здесь мужчина может остановиться, поговорить о важном и увидеть свой следующий шаг рядом с теми, кому близки те же ценности.</p>
             <a
               className="provenanceLink"
               href="https://razumlife.com/"
               target="_blank"
               rel="noreferrer"
-              aria-label="Познакомиться с Razum Life — сайт откроется в новой вкладке"
+              aria-label="Узнать больше о Razum Life — сайт откроется в новой вкладке"
             >
-              Познакомиться с Razum Life <span aria-hidden="true">↗</span>
+              Узнать больше о Razum Life <span aria-hidden="true">↗</span>
             </a>
           </div>
         </div>
       </section>
 
-      <section className="section manifesto" aria-label="Главная идея курса">
-        <div className="sectionInner">
-          <p>Ответы становятся яснее, когда мужчина задаёт себе честные вопросы.</p>
-          <h2>Путь начинается с готовности увидеть больше и сделать собственный выбор.</h2>
+      <section className="communityPhoto" aria-labelledby="community-photo-title">
+        <img src={communityPhoto} alt="Команда проекта «Путь мужчины»" />
+        <div className="communityPhotoOverlay">
+          <div className="sectionInner">
+            <p className="kicker">Путь рядом с теми, кто понимает</p>
+            <h2 id="community-photo-title">Важные перемены начинаются с честного разговора и поддержки.</h2>
+          </div>
         </div>
       </section>
     </>
