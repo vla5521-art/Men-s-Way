@@ -10,7 +10,16 @@ import {
   startingPoints,
   type ContentCard
 } from '../data/content'
+import alexanderHakimov from '../assets/alexander-hakimov.webp'
+import marinaTargakova from '../assets/marina-targakova.webp'
 import razumLifeLogo from '../assets/razum-life-logo.webp'
+import sergeyAvakov from '../assets/sergey-avakov.webp'
+
+const speakers = [
+  { name: 'Марина Таргакова', image: marinaTargakova, imageClassName: 'marina' },
+  { name: 'Александр Хакимов', image: alexanderHakimov },
+  { name: 'Сергей Аваков', image: sergeyAvakov }
+]
 
 export function Sections() {
   return (
@@ -95,6 +104,27 @@ export function Sections() {
                 <ol>
                   {module.topics.map((topic) => <li key={topic}>{topic}</li>)}
                 </ol>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section speakersSection" id="speakers">
+        <div className="sectionInner">
+          <SectionHeading
+            kicker="Люди проекта"
+            title="Спикеры курса"
+          />
+          <div className="speakerGrid">
+            {speakers.map((speaker) => (
+              <article className="speakerCard" key={speaker.name}>
+                <img
+                  className={speaker.imageClassName}
+                  src={speaker.image}
+                  alt={speaker.name}
+                />
+                <h3>{speaker.name}</h3>
               </article>
             ))}
           </div>

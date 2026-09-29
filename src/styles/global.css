@@ -328,6 +328,36 @@ button, a, input, summary { -webkit-tap-highlight-color: transparent; }
 .moduleCard li:last-child { border-bottom: 0; }
 .moduleCard li::before { position: absolute; top: 23px; left: 0; content: counter(topic, decimal-leading-zero); color: var(--gold); font-size: 12px; letter-spacing: .08em; }
 
+.speakersSection {
+  overflow: hidden;
+  color: var(--paper);
+  background: linear-gradient(125deg, #191512, #463223 58%, #211914) !important;
+}
+
+.speakersSection::before {
+  position: absolute;
+  top: -190px;
+  right: -130px;
+  width: 560px;
+  height: 560px;
+  border: 1px solid rgba(213, 163, 65, .17);
+  border-radius: 50%;
+  content: '';
+  box-shadow: 0 0 0 54px rgba(213, 163, 65, .035), 0 0 0 108px rgba(213, 163, 65, .02);
+  pointer-events: none;
+}
+
+.speakersSection .sectionInner { position: relative; z-index: 1; }
+.speakersSection .kicker { color: var(--gold-pale); }
+.speakersSection h2 { color: var(--paper); }
+.speakerGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 48px; }
+.speakerCard { position: relative; min-height: 500px; overflow: hidden; border: 1px solid rgba(242, 223, 174, .26); background: #2b221c; box-shadow: 0 24px 58px rgba(0, 0, 0, .22); }
+.speakerCard::after { position: absolute; inset: 35% 0 0; content: ''; background: linear-gradient(0deg, rgba(16, 12, 9, .96), rgba(16, 12, 9, .05)); pointer-events: none; }
+.speakerCard img { display: block; width: 100%; height: 100%; min-height: 500px; object-fit: cover; object-position: center; filter: saturate(.88) contrast(1.02); transition: transform 320ms ease, filter 320ms ease; }
+.speakerCard img.marina { object-position: 27% center; }
+.speakerCard h3 { position: absolute; z-index: 1; right: 28px; bottom: 28px; left: 28px; margin: 0; color: var(--paper); font-family: Georgia, 'Times New Roman', serif; font-size: clamp(25px, 2.4vw, 34px); font-weight: 500; line-height: 1.15; }
+.speakerCard:hover img { filter: saturate(1) contrast(1.03); transform: scale(1.025); }
+
 .testInvitation {
   overflow: hidden;
   padding: 84px 0 !important;
@@ -663,6 +693,8 @@ footer a:hover { color: var(--gold-pale); }
   .columns-3, .three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .recognition .cards { width: 100%; }
   .moduleGrid { grid-template-columns: 1fr; }
+  .speakerGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .speakerCard:last-child { grid-column: 1 / -1; }
   .courseResultsGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .resultCard, .resultCard:nth-child(4), .resultCard:nth-child(5) { grid-column: auto; }
   .resultCard:last-child { grid-column: 1 / -1; }
@@ -707,6 +739,10 @@ footer a:hover { color: var(--gold-pale); }
   .courseStep dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .card { min-height: 0; padding: 25px; }
   .moduleCard { padding: 28px 22px; }
+  .speakerGrid { grid-template-columns: 1fr; gap: 18px; }
+  .speakerCard, .speakerCard img { min-height: 112vw; max-height: 580px; }
+  .speakerCard:last-child { grid-column: auto; }
+  .speakerCard h3 { right: 22px; bottom: 22px; left: 22px; }
   .resultCard:last-child { grid-column: auto; }
   .provenanceSection { padding: 64px 0 !important; }
   .provenancePanel { grid-template-columns: 1fr; gap: 28px; padding: 32px 24px; text-align: center; }
