@@ -100,8 +100,7 @@ export function Sections() {
       <section className="section speakersSection" id="speakers">
         <div className="sectionInner">
           <SectionHeading
-            kicker="Люди проекта"
-            title="Спикеры курса"
+            title="Наставники проекта"
           />
           <div className="speakerGrid">
             {speakers.map((speaker) => (
@@ -190,10 +189,10 @@ export function Sections() {
   )
 }
 
-function SectionHeading({ kicker, title, text }: { kicker: string; title: string; text?: string }) {
+function SectionHeading({ kicker, title, text }: { kicker?: string; title: string; text?: string }) {
   return (
     <div className="sectionHeading">
-      <p className="kicker">{kicker}</p>
+      {kicker ? <p className="kicker">{kicker}</p> : null}
       <h2>{title}</h2>
       {text ? <p className="sectionLead">{text}</p> : null}
     </div>

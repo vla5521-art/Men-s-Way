@@ -701,11 +701,10 @@ footer a:hover { color: var(--gold-pale); }
   .versionBadge { padding: 6px 8px; font-size: 10px; }
   .mobileMenu { padding: 108px 20px 36px; }
   .hero { padding-top: 82px; }
-  .heroVisual { height: min(116vw, 620px); }
-  .heroVisual img { object-position: 50% 27%; }
+  .heroVisual { display: none; }
   .heroContent { padding: 38px 20px 44px; }
   .heroContent .eyebrow { font-size: 11px; letter-spacing: .19em; }
-  .hero h1 { margin: 16px 0 24px; font-size: clamp(48px, 15vw, 68px); }
+  .hero h1 { max-width: 100%; margin: 16px 0 24px; font-size: clamp(42px, 13vw, 58px); letter-spacing: -.055em; line-height: .88; }
   .slogan { font-size: clamp(19px, 6vw, 25px); letter-spacing: .08em; }
   .lead { font-size: 16px; line-height: 1.6; }
   .heroActions { flex-direction: column; }
