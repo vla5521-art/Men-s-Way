@@ -9,15 +9,15 @@ import {
   startingPoints,
   type ContentCard
 } from '../data/content'
-import alexanderHakimov from '../assets/alexander-hakimov.webp'
+import alexanderHakimov from '../assets/alexander-hakimov-transparent.webp'
 import communityPhoto from '../assets/community-team.webp'
-import marinaTargakova from '../assets/marina-targakova.webp'
+import marinaTargakova from '../assets/marina-targakova-transparent.webp'
 import razumLifeLogo from '../assets/razum-life-logo.webp'
-import sergeyAvakov from '../assets/sergey-avakov.webp'
+import sergeyAvakov from '../assets/sergey-avakov-transparent.webp'
 
 const speakers = [
-  { name: 'Марина Таргакова', image: marinaTargakova },
   { name: 'Александр Хакимов', image: alexanderHakimov },
+  { name: 'Марина Таргакова', image: marinaTargakova },
   { name: 'Сергей Аваков', image: sergeyAvakov }
 ]
 
