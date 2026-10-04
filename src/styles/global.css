@@ -342,9 +342,9 @@ button, a, input, summary { -webkit-tap-highlight-color: transparent; }
 .speakersSection .kicker { color: var(--gold-pale); }
 .speakersSection h2 { color: var(--paper); }
 .speakerGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 48px; }
-.speakerCard { position: relative; min-height: 500px; overflow: hidden; border: 1px solid rgba(242, 223, 174, .26); background: radial-gradient(circle at 50% 35%, rgba(213, 163, 65, .14), transparent 55%), #2b221c; box-shadow: 0 24px 58px rgba(0, 0, 0, .22); }
+.speakerCard { position: relative; min-height: 400px; overflow: hidden; border: 1px solid rgba(242, 223, 174, .26); background: radial-gradient(circle at 50% 35%, rgba(213, 163, 65, .14), transparent 55%), #2b221c; box-shadow: 0 24px 58px rgba(0, 0, 0, .22); }
 .speakerCard::after { position: absolute; inset: 35% 0 0; content: ''; background: linear-gradient(0deg, rgba(16, 12, 9, .96), rgba(16, 12, 9, .05)); pointer-events: none; }
-.speakerCard img { position: absolute; bottom: 0; left: 50%; display: block; width: 80%; height: auto; max-height: 80%; object-fit: contain; object-position: center bottom; filter: saturate(.88) contrast(1.02); transform: translateX(-50%); transition: transform 320ms ease, filter 320ms ease; }
+.speakerCard img { position: absolute; bottom: 0; left: 50%; display: block; width: 80%; height: auto; max-height: 100%; object-fit: contain; object-position: center bottom; filter: saturate(.88) contrast(1.02); transform: translateX(-50%); transition: transform 320ms ease, filter 320ms ease; }
 .speakerCard h3 { position: absolute; z-index: 1; right: 28px; bottom: 28px; left: 28px; margin: 0; color: var(--paper); font-family: Georgia, 'Times New Roman', serif; font-size: clamp(25px, 2.4vw, 34px); font-weight: 500; line-height: 1.15; }
 .speakerCard:hover img { filter: saturate(1) contrast(1.03); transform: translateX(-50%) scale(1.025); }
 
@@ -730,8 +730,8 @@ footer a:hover { color: var(--gold-pale); }
   .card { min-height: 0; padding: 25px; }
   .moduleCard { padding: 28px 22px; }
   .speakerGrid { grid-template-columns: 1fr; gap: 18px; }
-  .speakerCard { min-height: 112vw; max-height: 580px; }
-  .speakerCard img { width: 80%; max-height: 80%; }
+  .speakerCard { min-height: min(88vw, 540px); max-height: none; }
+  .speakerCard img { width: 80%; max-height: 100%; }
   .speakerCard:last-child { grid-column: auto; }
   .speakerCard h3 { right: 22px; bottom: 22px; left: 22px; }
   .provenanceSection { padding: 64px 0 !important; }
