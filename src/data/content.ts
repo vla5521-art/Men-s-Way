@@ -16,7 +16,7 @@ export type CourseStep = {
   topics: string[]
 }
 
-export const siteVersion = '3.5.3'
+export const siteVersion = '3.5.4'
 
 export const registrationLinks = {
   telegram: 'https://razumlife.space/Put_Men_TG/',
@@ -44,7 +44,7 @@ export const courseSteps: CourseStep[] = [
       'Тема 1. Два взгляда на трудности, новое восприятие вызовов',
       'Тема 2. Анатомия мужчины, скрытые уровни личности',
       'Тема 3. Четыре цели мужской жизни',
-      'Тема 4. Он и Он: как понимать природу друг друга'
+      'Тема 4. Он и Она: как понимать природу друг друга'
     ]
   },
   {
