@@ -11,7 +11,7 @@ export function Registration() {
         </div>
         <div className="registrationChoices" aria-label="Способы регистрации">
           <RegistrationLink platform="telegram" label="Участие в Telegram" href={registrationLinks.telegram} />
-          <RegistrationLink platform="vk" label="Участие в VK" href={registrationLinks.vk} />
+          <RegistrationLink platform="vk" label="Участие в MAX" href={registrationLinks.vk} />
         </div>
       </div>
     </section>

@@ -1,13 +1,6 @@
 import {
-  automaticState,
-  consciousState,
-  course,
-  courseResults,
   courseSteps,
-  painPoints,
-  programModules,
-  startingPoints,
-  type ContentCard
+  programModules
 } from '../data/content'
 import alexanderHakimov from '../assets/alexander-hakimov-transparent.webp'
 import communityPhoto from '../assets/community-team.webp'
@@ -24,20 +17,9 @@ const speakers = [
 export function Sections() {
   return (
     <>
-      <section className="section painSection" id="about">
-        <div className="sectionInner aboutLayout">
-          <div className="aboutContent">
-            <SectionHeading
-              kicker="Для кого этот курс"
-              title="Возможно, этот курс для Вас"
-              text="Не обязательно ждать кризиса, чтобы внимательнее посмотреть на себя, отношения и следующий этап жизни."
-            />
-            <ul className="signalGrid">
-              {painPoints.map((point) => <li key={point}>{point}</li>)}
-            </ul>
-            <p className="sectionConclusion">{course.description}</p>
-          </div>
-          <aside className="courseSteps" aria-label="Шаги курса">
+      <section className="section stepsSection" id="program" aria-label="Три шага программы курса">
+        <div className="sectionInner">
+          <div className="courseSteps">
             {courseSteps.map((step) => (
               <article className="courseStep" key={step.number}>
                 <p>Шаг {step.number}</p>
@@ -48,38 +30,16 @@ export function Sections() {
                 </dl>
               </article>
             ))}
-          </aside>
-        </div>
-      </section>
-
-      <section className="section recognition" id="starting-point">
-        <div className="sectionInner">
-          <SectionHeading
-            kicker="С чего мы начнём курс"
-            title="Внимательный взгляд на свою жизнь"
-          />
-          <CardGrid items={startingPoints} />
-        </div>
-      </section>
-
-      <section className="section contrastSection" aria-labelledby="contrast-title">
-        <div className="sectionInner">
-          <div className="sectionHeading">
-            <p className="kicker">Два состояния</p>
-            <h2 id="contrast-title">От привычных реакций —<br />к осознанному выбору</h2>
-          </div>
-          <div className="contrastGrid">
-            <FlowCard title="Когда срабатывает привычный сценарий" items={automaticState} tone="negative" />
-            <FlowCard title="Когда появляется пространство для выбора" items={consciousState} tone="positive" />
           </div>
         </div>
       </section>
 
-      <section className="section program" id="program">
+      <section className="section program" aria-labelledby="program-title">
         <div className="sectionInner">
           <SectionHeading
             kicker="Программа курса"
             title="Два месяца практики"
+            id="program-title"
           />
           <div className="moduleGrid">
             {programModules.map((module) => (
@@ -116,7 +76,7 @@ export function Sections() {
         </div>
       </section>
 
-      <section className="section testInvitation" aria-labelledby="test-invitation-title">
+      <section className="section testInvitation" id="test" aria-labelledby="test-invitation-title">
         <div className="sectionInner testInvitationPanel">
           <div className="testInvitationCopy">
             <p className="kicker">Короткая практика · 7–10 минут</p>
@@ -132,26 +92,7 @@ export function Sections() {
         </div>
       </section>
 
-      <section className="section results" id="results">
-        <div className="sectionInner">
-          <SectionHeading
-            kicker="Результат"
-            title="К чему мы будем двигаться"
-            text="Через знания, практику и их применение в отношениях, решениях и повседневных действиях."
-          />
-          <div className="courseResultsGrid">
-            {courseResults.map((item) => (
-              <article className="resultCard" key={item.title}>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </article>
-            ))}
-          </div>
-          <p className="resultTrajectory">К внутренней устойчивости, осмысленным решениям, более глубоким отношениям и духовному развитию.</p>
-        </div>
-      </section>
-
-      <section className="section provenanceSection" aria-labelledby="razum-life-title">
+      <section className="section provenanceSection" id="razum-life" aria-labelledby="razum-life-title">
         <div className="sectionInner provenancePanel">
           <div className="provenanceLogo" aria-hidden="true">
             <img src={razumLifeLogo} alt="" />
@@ -176,49 +117,30 @@ export function Sections() {
         </div>
       </section>
 
-      <section className="communityPhoto" aria-labelledby="community-photo-title">
-        <img src={communityPhoto} alt="Команда проекта «Путь мужчины»" />
-        <div className="communityPhotoOverlay">
-          <div className="sectionInner">
-            <p className="kicker">Путь рядом с теми, кто понимает</p>
-            <h2 id="community-photo-title">Важные перемены начинаются с честного разговора и поддержки.</h2>
-          </div>
-        </div>
-      </section>
     </>
   )
 }
 
-function SectionHeading({ kicker, title, text }: { kicker?: string; title: string; text?: string }) {
+export function CommunityPhoto() {
+  return (
+    <section className="communityPhoto" aria-labelledby="community-photo-title">
+      <img src={communityPhoto} alt="Команда проекта «Путь мужчины»" />
+      <div className="communityPhotoOverlay">
+        <div className="sectionInner">
+          <p className="kicker">Путь рядом с теми, кто понимает</p>
+          <h2 id="community-photo-title">Важные перемены начинаются с честного разговора и поддержки.</h2>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function SectionHeading({ kicker, title, text, id }: { kicker?: string; title: string; text?: string; id?: string }) {
   return (
     <div className="sectionHeading">
       {kicker ? <p className="kicker">{kicker}</p> : null}
-      <h2>{title}</h2>
+      <h2 id={id}>{title}</h2>
       {text ? <p className="sectionLead">{text}</p> : null}
     </div>
-  )
-}
-
-function CardGrid({ items }: { items: ContentCard[] }) {
-  return (
-    <div className="cards columns-3">
-      {items.map((item) => (
-        <article className="card" key={item.title}>
-          <h3>{item.title}</h3>
-          {item.text ? <p>{item.text}</p> : null}
-        </article>
-      ))}
-    </div>
-  )
-}
-
-function FlowCard({ title, items, tone }: { title: string; items: string[]; tone: 'negative' | 'positive' }) {
-  return (
-    <article className={`contrastCard ${tone}`}>
-      <h3>{title}</h3>
-      <ol className="flowList">
-        {items.map((item) => <li key={item}>{item}</li>)}
-      </ol>
-    </article>
   )
 }

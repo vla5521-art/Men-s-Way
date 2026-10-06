@@ -21,7 +21,7 @@ export type CourseStep = {
   finish: string
 }
 
-export const siteVersion = '3.4.6'
+export const siteVersion = '3.5.0'
 
 export const registrationLinks = {
   telegram: 'https://razumlife.space/Put_Men_TG/',
@@ -61,11 +61,12 @@ export const courseSteps: CourseStep[] = [
 ]
 
 export const navigation = [
-  { label: 'Для кого', href: '#about' },
-  { label: 'Программа', href: '#program' },
-  { label: 'Результат', href: '#results' },
-  { label: 'Стоимость', href: '#cost' },
-  { label: 'Регистрация', href: '#registration' }
+  { label: 'Программа курса', href: '#program' },
+  { label: 'Наставники', href: '#speakers' },
+  { label: 'Тест', href: '#test' },
+  { label: 'Razum Life', href: '#razum-life' },
+  { label: 'Регистрация', href: '#registration' },
+  { label: 'Тарифы', href: '#tariffs' }
 ]
 
 export const painPoints = [

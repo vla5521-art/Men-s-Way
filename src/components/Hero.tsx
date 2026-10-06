@@ -1,4 +1,4 @@
-import svantaPriyaHero from '../assets/svanta-priya-hero.webp'
+import coursePosterHero from '../assets/course-poster-hero.webp'
 import { course } from '../data/content'
 import { Countdown } from './Countdown'
 
@@ -7,14 +7,18 @@ type FactIcon = 'calendar' | 'clock' | 'online'
 export function Hero() {
   return (
     <section className="hero" id="top">
+      <div className="heroVisual">
+        <img
+          src={coursePosterHero}
+          alt="Путь мужчины — практический онлайн-курс"
+        />
+      </div>
       <div className="heroContent">
-        <p className="eyebrow">Практический онлайн-курс</p>
-        <h1>{course.title}</h1>
-        <p className="slogan">Сила характера —<br />масштаб и реализация</p>
+        <h1 className="visuallyHidden">{course.title}</h1>
         <p className="lead">Для мужчин, которые хотят укрепить характер, разобраться в отношениях и увидеть направление дальнейшего развития.</p>
         <div className="heroActions">
           <a className="btn primary" href="#registration" data-analytics-event="REGISTRATION_INTENT" data-analytics-placement="hero">Записаться на курс</a>
-          <a className="btn secondary" href="#about" data-analytics-event="COURSE_DETAILS" data-analytics-placement="hero">Узнать о курсе</a>
+          <a className="btn secondary" href="#program" data-analytics-event="COURSE_DETAILS" data-analytics-placement="hero">Узнать о курсе</a>
         </div>
         <div className="facts" aria-label="Параметры курса">
           <Fact icon="calendar" label="Старт" value={course.start} />
@@ -25,9 +29,6 @@ export function Hero() {
           <span className="countdownLabel">До начала курса осталось</span>
           <Countdown />
         </div>
-      </div>
-      <div className="heroVisual" aria-hidden="true">
-        <img src={svantaPriyaHero} alt="" />
       </div>
     </section>
   )
