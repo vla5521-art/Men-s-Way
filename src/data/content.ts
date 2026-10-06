@@ -16,7 +16,7 @@ export type CourseStep = {
   topics: string[]
 }
 
-export const siteVersion = '3.5.11'
+export const siteVersion = '3.5.12'
 
 export const registrationLinks = {
   telegram: 'https://razumlife.space/Put_Men_TG/',
