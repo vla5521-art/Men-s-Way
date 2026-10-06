@@ -80,7 +80,11 @@ export function Sections() {
           </div>
           <div className="provenanceContent">
             <p className="kicker">Среда, из которой вырос курс</p>
-            <h2 id="razum-life-title"><span className="courseName">«Путь мужчины»</span> — часть сообщества Razum Life</h2>
+            <h2 id="razum-life-title">
+              <span className="courseName">«Путь мужчины»</span>
+              <span className="courseNameSeparator" aria-hidden="true"> —</span>{' '}
+              <span className="communityPhrase">часть сообщества</span> Razum Life
+            </h2>
             <p className="sectionLead">
               Razum Life объединяет людей, которым важно жить осознанно, строить крепкие семьи и расти через честный диалог. Поэтому курс строится не вокруг готовых советов, а вокруг личной практики, общения и поддержки.
             </p>
