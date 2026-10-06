@@ -3,12 +3,6 @@ export type ContentCard = {
   text?: string
 }
 
-export type ProgramModule = {
-  number: string
-  title: string
-  topics: string[]
-}
-
 export type ResultCard = {
   title: string
   text: string
@@ -19,9 +13,10 @@ export type CourseStep = {
   title: string
   start: string
   finish: string
+  topics: string[]
 }
 
-export const siteVersion = '3.5.0'
+export const siteVersion = '3.5.1'
 
 export const registrationLinks = {
   telegram: 'https://razumlife.space/Put_Men_TG/',
@@ -44,19 +39,37 @@ export const courseSteps: CourseStep[] = [
     number: '1',
     title: 'Сила характера',
     start: '15 ноября',
-    finish: '15 декабря'
+    finish: '15 декабря',
+    topics: [
+      'Тема 1. Два взгляда на трудности, новое восприятие вызовов',
+      'Тема 2. Анатомия мужчины, скрытые уровни личности',
+      'Тема 3. Четыре цели мужской жизни',
+      'Тема 4. Он и Он: как понимать природу друг друга'
+    ]
   },
   {
     number: '2',
     title: '4M Challenge',
     start: '3 января',
-    finish: '9 января'
+    finish: '9 января',
+    topics: [
+      '1 М — Mind (Разум)',
+      '2 М — Muscle (Тело)',
+      '3 М — Mood (Эмоции)',
+      '4 М — Mission (Дух)'
+    ]
   },
   {
     number: '3',
     title: 'Масштаб и реализация',
     start: '01 февраля',
-    finish: '28 февраля'
+    finish: '28 февраля',
+    topics: [
+      'Тема 1. Аскезы как инструмент изменения состояния и укрепления воли',
+      'Тема 2. Ключевые роли мужчины',
+      'Тема 3. Законы судьбы, как влиять на свое будущее',
+      'Тема 4. Мастерство отношений на всех уровнях'
+    ]
   }
 ]
 
@@ -109,29 +122,6 @@ export const consciousState = [
   'Ответственность',
   'Диалог',
   'Новый результат'
-]
-
-export const programModules: ProgramModule[] = [
-  {
-    number: '01',
-    title: 'Сила характера',
-    topics: [
-      'Два взгляда на трудности, новое восприятие вызовов',
-      'Анатомия мужчины, скрытые уровни личности',
-      'Аскезы как инструмент изменения состояния и укрепления воли',
-      'Он и Она, как понимать природу друг друга'
-    ]
-  },
-  {
-    number: '02',
-    title: 'Масштаб и реализация',
-    topics: [
-      'Четыре фундаментальные цели мужской жизни',
-      'Ключевые роли мужчины',
-      'Законы судьбы, как влиять на своё будущее',
-      'Мастерство отношений на всех уровнях'
-    ]
-  }
 ]
 
 export const courseResults: ResultCard[] = [

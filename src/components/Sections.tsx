@@ -1,7 +1,4 @@
-import {
-  courseSteps,
-  programModules
-} from '../data/content'
+import { courseSteps } from '../data/content'
 import alexanderHakimov from '../assets/alexander-hakimov-transparent.webp'
 import communityPhoto from '../assets/community-team.webp'
 import marinaTargakova from '../assets/marina-targakova-transparent.webp'
@@ -28,29 +25,9 @@ export function Sections() {
                   <div><dt>Старт</dt><dd>{step.start}</dd></div>
                   <div><dt>Финиш</dt><dd>{step.finish}</dd></div>
                 </dl>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section program" aria-labelledby="program-title">
-        <div className="sectionInner">
-          <SectionHeading
-            kicker="Программа курса"
-            title="Два месяца практики"
-            id="program-title"
-          />
-          <div className="moduleGrid">
-            {programModules.map((module) => (
-              <article className="moduleCard" key={module.number}>
-                <div className="moduleHeading">
-                  <span>Модуль {module.number}</span>
-                  <h3>{module.title}</h3>
-                </div>
-                <ol>
-                  {module.topics.map((topic) => <li key={topic}>{topic}</li>)}
-                </ol>
+                <ul className="stepTopics">
+                  {step.topics.map((topic) => <li key={topic}>{topic}</li>)}
+                </ul>
               </article>
             ))}
           </div>
