@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { Analytics } from './components/Analytics'
@@ -9,6 +10,23 @@ import './styles/global.css'
 
 export default function App() {
   const path = window.location.pathname.replace(/\/+$/, '') || '/'
+
+  useEffect(() => {
+    function scrollToHash() {
+      const id = decodeURIComponent(window.location.hash.slice(1))
+      if (!id) return
+
+      document.getElementById(id)?.scrollIntoView({ block: 'start' })
+    }
+
+    const frame = window.requestAnimationFrame(scrollToHash)
+    window.addEventListener('hashchange', scrollToHash)
+
+    return () => {
+      window.cancelAnimationFrame(frame)
+      window.removeEventListener('hashchange', scrollToHash)
+    }
+  }, [])
 
   if (path === '/test') {
     return (
