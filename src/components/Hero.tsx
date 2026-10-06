@@ -16,7 +16,7 @@ export function Hero() {
       </div>
       <div className="heroContent">
         <h1 className="visuallyHidden">{course.title}</h1>
-        <p className="lead">Для мужчин, которые хотят укрепить характер, разобраться в отношениях и увидеть направление дальнейшего развития.</p>
+        <p className="lead">Для мужчин, которые хотят укрепить характер, разобраться в отношениях и увидеть направление своего дальнейшего развития.</p>
         <div className="heroActions">
           <a className="btn primary" href="#registration" data-analytics-event="REGISTRATION_INTENT" data-analytics-placement="hero">Записаться на курс</a>
           <a className="btn secondary" href="#program" data-analytics-event="COURSE_DETAILS" data-analytics-placement="hero">Узнать о курсе</a>
