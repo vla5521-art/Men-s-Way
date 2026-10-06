@@ -130,8 +130,8 @@ button, a, input, summary { -webkit-tap-highlight-color: transparent; }
 .hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(440px, .86fr) minmax(520px, 1fr);
-  min-height: 1040px;
+  grid-template-columns: minmax(500px, min(52vw, 900px)) minmax(520px, 1fr);
+  min-height: clamp(860px, 96vh, 980px);
   overflow: hidden;
   padding-top: 94px;
   background: #f4efe7;
@@ -142,9 +142,9 @@ button, a, input, summary { -webkit-tap-highlight-color: transparent; }
   z-index: 3;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   width: auto;
-  padding: 88px max(28px, calc((100vw - 1240px) / 2)) 80px 72px;
+  padding: clamp(108px, 14vh, 150px) max(28px, calc((100vw - 1240px) / 2)) 64px 64px;
   background: linear-gradient(120deg, #f7f3ec 0%, #f7f3ec 68%, #eee3d3 100%);
 }
 
@@ -255,7 +255,7 @@ button, a, input, summary { -webkit-tap-highlight-color: transparent; }
 .heroVisual { position: relative; z-index: 1; min-width: 0; overflow: hidden; background: #17130f; }
 .heroVisual::after { position: absolute; content: ''; inset: 0; background: linear-gradient(90deg, rgba(17, 13, 10, .05), transparent 18%, transparent 82%, rgba(17, 13, 10, .08)); pointer-events: none; }
 .heroVisual img { display: block; width: 100%; height: 100%; }
-.heroVisual img { object-fit: cover; object-position: 50% 50%; }
+.heroVisual img { object-fit: cover; object-position: 50% 34%; }
 
 .section, .registration, .finalCta { padding: 108px 0; }
 .section { position: relative; background: var(--paper); }
@@ -649,8 +649,9 @@ footer a:hover { color: var(--gold-pale); }
 @media (max-width: 1120px) {
   .header { gap: 20px; }
   .nav { gap: 16px; font-size: 13px; }
-  .hero { grid-template-columns: minmax(380px, .82fr) minmax(470px, 1fr); min-height: 980px; }
-  .heroContent { padding: 66px 34px 62px 48px; }
+  .hero { grid-template-columns: minmax(410px, .94fr) minmax(470px, 1fr); min-height: clamp(780px, 100vh, 900px); }
+  .heroContent { padding: 86px 34px 56px 48px; }
+  .heroVisual img { object-position: 50% 38%; }
   .facts { gap: 11px; }
   .fact { min-width: 0; padding-right: 10px; }
 }
