@@ -9,12 +9,6 @@ export function Hero() {
     <section className="hero" id="top">
       <div className="heroVisual">
         <img
-          className="heroVisualBackdrop"
-          src={coursePosterHero}
-          alt=""
-          aria-hidden="true"
-        />
-        <img
           className="heroVisualPoster"
           src={coursePosterHero}
           alt="Путь мужчины — практический онлайн-курс"
