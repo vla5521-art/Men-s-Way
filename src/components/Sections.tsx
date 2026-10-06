@@ -16,10 +16,13 @@ export function Sections() {
     <>
       <section className="section stepsSection" id="program" aria-labelledby="program-title">
         <div className="sectionInner">
-          <SectionHeading
-            id="program-title"
-            title="Программа курса"
-          />
+          <div className="sectionHeading">
+            <h2 className="programTitle" id="program-title">
+              <span>Любой путь</span>{' '}
+              <span>начинается с</span>{' '}
+              <span>первого шага!</span>
+            </h2>
+          </div>
           <div className="courseSteps">
             {courseSteps.map((step) => (
               <article className="courseStep" key={step.number}>
