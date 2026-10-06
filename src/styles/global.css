@@ -278,7 +278,7 @@ button, a, input, summary { -webkit-tap-highlight-color: transparent; }
 .signalGrid li::before { position: absolute; top: 29px; left: 8px; width: 8px; height: 8px; border: 1px solid var(--gold); content: ''; transform: rotate(45deg); }
 
 .stepsSection { padding: 84px 0; background: linear-gradient(90deg, rgba(255,255,255,.55), transparent 38%), var(--paper) !important; }
-.courseSteps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.courseSteps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 34px; }
 .courseStep { padding: 25px 26px 24px; border: 1px solid var(--line-strong); border-top: 3px solid var(--gold); background: rgba(255, 253, 248, .9); box-shadow: 0 14px 38px rgba(86, 60, 31, .08); }
 .courseStep > p { margin: 0 0 9px; color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
 .courseStep h3 { margin: 0 0 20px; color: var(--wood-deep); font-family: Georgia, 'Times New Roman', serif; font-size: 25px; font-weight: 500; line-height: 1.16; }

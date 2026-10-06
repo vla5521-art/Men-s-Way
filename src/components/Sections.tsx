@@ -14,8 +14,12 @@ const speakers = [
 export function Sections() {
   return (
     <>
-      <section className="section stepsSection" id="program" aria-label="Три шага программы курса">
+      <section className="section stepsSection" id="program" aria-labelledby="program-title">
         <div className="sectionInner">
+          <SectionHeading
+            id="program-title"
+            title="Программа курса"
+          />
           <div className="courseSteps">
             {courseSteps.map((step) => (
               <article className="courseStep" key={step.number}>
