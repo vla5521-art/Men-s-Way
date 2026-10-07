@@ -7,7 +7,11 @@ import sergeyAvakov from '../assets/sergey-avakov-transparent.webp'
 
 const speakers = [
   { name: 'Александр Хакимов', image: alexanderHakimov },
-  { name: 'Марина Таргакова', image: marinaTargakova },
+  {
+    name: 'Марина Таргакова',
+    image: marinaTargakova,
+    description: 'Психотерапевт мирового уровня, автор книг и семинаров на тему семейных взаимоотношений и воспитания детей, президент общественного объединения «Razum Life».'
+  },
   {
     name: 'Сергей Аваков',
     image: sergeyAvakov,
