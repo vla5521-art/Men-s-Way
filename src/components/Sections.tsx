@@ -8,7 +8,11 @@ import sergeyAvakov from '../assets/sergey-avakov-transparent.webp'
 const speakers = [
   { name: 'Александр Хакимов', image: alexanderHakimov },
   { name: 'Марина Таргакова', image: marinaTargakova },
-  { name: 'Сергей Аваков', image: sergeyAvakov }
+  {
+    name: 'Сергей Аваков',
+    image: sergeyAvakov,
+    description: 'Психолог; профессиональный коуч-консультант по личностному развитию; автор и ведущий популярных тренингов и семинаров; писатель; сооснователь и наставник бизнес-клуба «Артха»; руководитель ретрит-центра; награжден почетным званием «Рыцарь гуманной педагогики»; отец 6 детей.'
+  }
 ]
 
 export function Sections() {
@@ -48,12 +52,17 @@ export function Sections() {
           />
           <div className="speakerGrid">
             {speakers.map((speaker) => (
-              <article className="speakerCard" key={speaker.name}>
-                <img
-                  src={speaker.image}
-                  alt={speaker.name}
-                />
-                <h3>{speaker.name}</h3>
+              <article className="speakerProfile" key={speaker.name}>
+                <div className="speakerCard">
+                  <img
+                    src={speaker.image}
+                    alt={speaker.name}
+                  />
+                  <h3>{speaker.name}</h3>
+                </div>
+                {speaker.description && (
+                  <p className="speakerDescription">{speaker.description}</p>
+                )}
               </article>
             ))}
           </div>
