@@ -11,8 +11,7 @@
 - Рабочий Vercel-проект: `men-s-way`.
 - Продакшн: <https://www.menway.pro>.
 - Дополнительные домены: `menway.pro`, `men-s-way.vercel.app`, `men-s-way-vla552.vercel.app`, `men-s-way-git-main-vla552.vercel.app`.
-- Актуальная версия: **3.5.21**.
-- Продакшн-коммит с отображаемой версией 3.5.21: `149812c8c6329e81a216658ff29504120631df2d`.
+- Актуальная версия: **3.5.22**.
 - Владелец проекта: Владимир Ильин (`vla5521-art`).
 
 Не смешивать этот репозиторий, задачи и релизы с PROFiGYM, СПУ, Опросником RazumLife и другими проектами.
@@ -153,7 +152,7 @@
 |---|---|---|
 | `/go/01` | `survey` | `owned` |
 | `/go/02` | `gurumaharaj` | `partner` |
-| `/go/03` | `malika_mala` | `social` |
+| `/go/03` | `malika_mala_telegram` | `social` |
 | `/go/04` | `shuddha` | `partner` |
 | `/go/05` | `mens_talk` | `social` |
 | `/go/06` | `mens_talk_city` | `social` |
@@ -174,6 +173,14 @@
 | `/go/21` | `rl_america` | `community` |
 | `/go/22` | `rl_germany` | `community` |
 | `/go/23` | `rl_italy` | `community` |
+| `/go/24` | `malika_mala_instagram` | `social` |
+| `/go/25` | `ru_instagram` | `social` |
+| `/go/26` | `rama_telegram` | `social` |
+| `/go/27` | `razum_kz_telegram` | `social` |
+| `/go/28` | `razum_men_instagram` | `social` |
+| `/go/29` | `razum_life_instagram` | `social` |
+| `/go/30` | `pf_instagram` | `social` |
+| `/go/31` | `wisdom_academy_instagram` | `social` |
 
 Исходная рабочая таблица: `UTM-метки_ПМ_заполнено.xlsx`. Редиректы заданы в `vercel.json`.
 
@@ -230,6 +237,7 @@
 | 3.5.19 | Описание Марины Таргаковой |
 | 3.5.20 | 23 фирменные короткие UTM-ссылки |
 | 3.5.21 | Четыре основные цели Метрики и корректный индикатор версии |
+| 3.5.22 | Новые каналы привлечения, ссылки `/go/24`–`/go/31` и разделение Telegram/Instagram Малика-малы |
 
 ## 13. Открытые задачи и ограничения
 

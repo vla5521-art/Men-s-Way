@@ -2,7 +2,7 @@
   "redirects": [
     { "source": "/go/01", "destination": "/about?utm_source=survey&utm_medium=owned&utm_campaign=put_men_2026", "permanent": false },
     { "source": "/go/02", "destination": "/about?utm_source=gurumaharaj&utm_medium=partner&utm_campaign=put_men_2026", "permanent": false },
-    { "source": "/go/03", "destination": "/about?utm_source=malika_mala&utm_medium=social&utm_campaign=put_men_2026", "permanent": false },
+    { "source": "/go/03", "destination": "/about?utm_source=malika_mala_telegram&utm_medium=social&utm_campaign=put_men_2026", "permanent": false },
     { "source": "/go/04", "destination": "/about?utm_source=shuddha&utm_medium=partner&utm_campaign=put_men_2026", "permanent": false },
     { "source": "/go/05", "destination": "/about?utm_source=mens_talk&utm_medium=social&utm_campaign=put_men_2026", "permanent": false },
     { "source": "/go/06", "destination": "/about?utm_source=mens_talk_city&utm_medium=social&utm_campaign=put_men_2026", "permanent": false },
@@ -22,7 +22,15 @@
     { "source": "/go/20", "destination": "/about?utm_source=rl_baltics&utm_medium=community&utm_campaign=put_men_2026", "permanent": false },
     { "source": "/go/21", "destination": "/about?utm_source=rl_america&utm_medium=community&utm_campaign=put_men_2026", "permanent": false },
     { "source": "/go/22", "destination": "/about?utm_source=rl_germany&utm_medium=community&utm_campaign=put_men_2026", "permanent": false },
-    { "source": "/go/23", "destination": "/about?utm_source=rl_italy&utm_medium=community&utm_campaign=put_men_2026", "permanent": false }
+    { "source": "/go/23", "destination": "/about?utm_source=rl_italy&utm_medium=community&utm_campaign=put_men_2026", "permanent": false },
+    { "source": "/go/24", "destination": "/about?utm_source=malika_mala_instagram&utm_medium=social&utm_campaign=put_men_2026", "permanent": false },
+    { "source": "/go/25", "destination": "/about?utm_source=ru_instagram&utm_medium=social&utm_campaign=put_men_2026", "permanent": false },
+    { "source": "/go/26", "destination": "/about?utm_source=rama_telegram&utm_medium=social&utm_campaign=put_men_2026", "permanent": false },
+    { "source": "/go/27", "destination": "/about?utm_source=razum_kz_telegram&utm_medium=social&utm_campaign=put_men_2026", "permanent": false },
+    { "source": "/go/28", "destination": "/about?utm_source=razum_men_instagram&utm_medium=social&utm_campaign=put_men_2026", "permanent": false },
+    { "source": "/go/29", "destination": "/about?utm_source=razum_life_instagram&utm_medium=social&utm_campaign=put_men_2026", "permanent": false },
+    { "source": "/go/30", "destination": "/about?utm_source=pf_instagram&utm_medium=social&utm_campaign=put_men_2026", "permanent": false },
+    { "source": "/go/31", "destination": "/about?utm_source=wisdom_academy_instagram&utm_medium=social&utm_campaign=put_men_2026", "permanent": false }
   ],
   "rewrites": [
     { "source": "/about", "destination": "/about.html" },
