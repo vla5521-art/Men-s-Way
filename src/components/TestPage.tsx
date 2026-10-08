@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import logo from '../assets/logo-light.webp'
 import { course } from '../data/content'
 import { testAnswers, testDomains, testQuestions, type TestDomain } from '../data/test'
-import { reachGoal } from '../services/analytics'
+import { METRIKA_GOALS, reachGoal } from '../services/analytics'
 
 type Stage = 'intro' | 'questions' | 'result'
 
@@ -92,7 +92,7 @@ export function TestPage() {
   useEffect(() => {
     const previousTitle = document.title
     document.title = 'Точки опоры — короткая практика | Путь мужчины'
-    reachGoal('TEST_OPEN')
+    reachGoal(METRIKA_GOALS.testOpen)
     return () => { document.title = previousTitle }
   }, [])
 
@@ -130,7 +130,7 @@ export function TestPage() {
     }
 
     if (progress.current === testQuestions.length - 1) {
-      reachGoal('TEST_COMPLETE')
+      reachGoal(METRIKA_GOALS.testComplete)
       updateProgress({ ...progress, stage: 'result', milestones })
       return
     }

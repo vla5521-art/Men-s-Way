@@ -1,6 +1,13 @@
 const counterId = Number(import.meta.env.VITE_YANDEX_METRIKA_ID)
 const attributionStorageKey = 'pm_attribution_v1'
 
+export const METRIKA_GOALS = {
+  registrationTelegram: 'pm_registration_tg',
+  registrationMax: 'pm_registration_max',
+  testOpen: 'pm_test_open',
+  testComplete: 'pm_test_complete'
+} as const
+
 type GoalParams = Record<string, string | number | boolean>
 
 type MetrikaOptions = Record<string, string | boolean>

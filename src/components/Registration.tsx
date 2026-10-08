@@ -1,4 +1,5 @@
 import { registrationLinks } from '../data/content'
+import { METRIKA_GOALS } from '../services/analytics'
 
 export function Registration() {
   return (
@@ -33,7 +34,9 @@ function RegistrationLink({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      data-analytics-event={platform === 'telegram' ? 'CLICK_TELEGRAM' : 'CLICK_MAX'}
+      data-analytics-event={platform === 'telegram'
+        ? METRIKA_GOALS.registrationTelegram
+        : METRIKA_GOALS.registrationMax}
       data-analytics-placement="registration"
     >
       <PlatformIcon platform={platform} />
