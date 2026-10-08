@@ -6,7 +6,11 @@ import razumLifeLogo from '../assets/razum-life-logo.webp'
 import sergeyAvakov from '../assets/sergey-avakov-transparent.webp'
 
 const speakers = [
-  { name: 'Александр Хакимов', image: alexanderHakimov },
+  {
+    name: 'Александр Хакимов',
+    image: alexanderHakimov,
+    description: 'Известный в России и за рубежом специалист по ведической культуре, писатель, психолог, философ, проповедник, обладатель премии «На благо мира», автор и ведущий международных лекций и семинаров.'
+  },
   {
     name: 'Марина Таргакова',
     image: marinaTargakova,
