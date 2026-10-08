@@ -30,7 +30,8 @@
     { "source": "/go/28", "destination": "/about?utm_source=razum_men_instagram&utm_medium=social&utm_campaign=put_men_2026", "permanent": false },
     { "source": "/go/29", "destination": "/about?utm_source=razum_life_instagram&utm_medium=social&utm_campaign=put_men_2026", "permanent": false },
     { "source": "/go/30", "destination": "/about?utm_source=pf_instagram&utm_medium=social&utm_campaign=put_men_2026", "permanent": false },
-    { "source": "/go/31", "destination": "/about?utm_source=wisdom_academy_instagram&utm_medium=social&utm_campaign=put_men_2026", "permanent": false }
+    { "source": "/go/31", "destination": "/about?utm_source=wisdom_academy_instagram&utm_medium=social&utm_campaign=put_men_2026", "permanent": false },
+    { "source": "/go/32", "destination": "/about?utm_source=das_telegram_stories&utm_medium=social&utm_campaign=put_men_2026", "permanent": false }
   ],
   "rewrites": [
     { "source": "/about", "destination": "/about.html" },
